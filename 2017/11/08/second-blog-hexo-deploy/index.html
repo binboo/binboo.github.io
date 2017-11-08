@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="#利用HEXO建立个人静态网站(一)由于HEXO的快速强大的功能受到人们广泛的关注，前两天我利用课余时间搭建了自己的个人博客网站，我采用HEXO搭建个人网站主要是基于以下几点考虑：   个人博客用户访问量不大，没有太多功能方面的要求，采用没有数据库支持的静态博客完全可行  HEXO支持轻量级的MARKDOWN语法。  符合开源精神，自主操控性较强，是一个自由、安静、个性化的写作平台。    下面我">
+<meta name="description" content="由于HEXO的快速强大的功能受到人们广泛的关注，前两天我利用课余时间搭建了自己的个人博客网站，我采用HEXO搭建个人网站主要是基于以下几点考虑：   个人博客用户访问量不大，没有太多功能方面的要求，采用没有数据库支持的静态博客完全可行  HEXO支持轻量级的MARKDOWN语法。  符合开源精神，自主操控性较强，是一个自由、安静、个性化的写作平台。    下面我就搭建过程中的主要步骤以及搭建过程中">
 <meta name="keywords" content="Hexo,Node.js,git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用HEXO建立个人静态网站(一)">
 <meta property="og:url" content="http://yoursite.com/2017/11/08/second-blog-hexo-deploy/index.html">
 <meta property="og:site_name" content="Chauncy Li">
-<meta property="og:description" content="#利用HEXO建立个人静态网站(一)由于HEXO的快速强大的功能受到人们广泛的关注，前两天我利用课余时间搭建了自己的个人博客网站，我采用HEXO搭建个人网站主要是基于以下几点考虑：   个人博客用户访问量不大，没有太多功能方面的要求，采用没有数据库支持的静态博客完全可行  HEXO支持轻量级的MARKDOWN语法。  符合开源精神，自主操控性较强，是一个自由、安静、个性化的写作平台。    下面我">
+<meta property="og:description" content="由于HEXO的快速强大的功能受到人们广泛的关注，前两天我利用课余时间搭建了自己的个人博客网站，我采用HEXO搭建个人网站主要是基于以下几点考虑：   个人博客用户访问量不大，没有太多功能方面的要求，采用没有数据库支持的静态博客完全可行  HEXO支持轻量级的MARKDOWN语法。  符合开源精神，自主操控性较强，是一个自由、安静、个性化的写作平台。    下面我就搭建过程中的主要步骤以及搭建过程中">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-08T15:27:17.045Z">
+<meta property="og:updated_time" content="2017-11-08T15:39:13.898Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用HEXO建立个人静态网站(一)">
-<meta name="twitter:description" content="#利用HEXO建立个人静态网站(一)由于HEXO的快速强大的功能受到人们广泛的关注，前两天我利用课余时间搭建了自己的个人博客网站，我采用HEXO搭建个人网站主要是基于以下几点考虑：   个人博客用户访问量不大，没有太多功能方面的要求，采用没有数据库支持的静态博客完全可行  HEXO支持轻量级的MARKDOWN语法。  符合开源精神，自主操控性较强，是一个自由、安静、个性化的写作平台。    下面我">
+<meta name="twitter:description" content="由于HEXO的快速强大的功能受到人们广泛的关注，前两天我利用课余时间搭建了自己的个人博客网站，我采用HEXO搭建个人网站主要是基于以下几点考虑：   个人博客用户访问量不大，没有太多功能方面的要求，采用没有数据库支持的静态博客完全可行  HEXO支持轻量级的MARKDOWN语法。  符合开源精神，自主操控性较强，是一个自由、安静、个性化的写作平台。    下面我就搭建过程中的主要步骤以及搭建过程中">
 
 
 
@@ -342,7 +342,7 @@
       
 
       
-        <p>#利用HEXO建立个人静态网站(一)<br>由于HEXO的快速强大的功能受到人们广泛的关注，前两天我利用课余时间搭建了自己的个人博客网站，我采用HEXO搭建个人网站主要是基于以下几点考虑：</p>
+        <p>由于HEXO的快速强大的功能受到人们广泛的关注，前两天我利用课余时间搭建了自己的个人博客网站，我采用HEXO搭建个人网站主要是基于以下几点考虑：</p>
 <blockquote>
 <ul>
 <li><p>个人博客用户访问量不大，没有太多功能方面的要求，采用没有数据库支持的静态博客完全可行</p>
@@ -354,36 +354,34 @@
 </ul>
 </blockquote>
 <p>下面我就搭建过程中的主要步骤以及搭建过程中遇到的错误做一些说明（以下内容全部基于UBUNTU 16.04）：</p>
-<p>##配置环境</p>
-<blockquote>
+<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><blockquote>
 <ul>
 <li><strong>安装Node.js</strong><br>作用：生成静态页面</li>
 <li><strong>安装git</strong><br>作用：把本地的hexo提交到github上。<br>（本篇博文默认git已经配置好，包括SSH Keys）</li>
 </ul>
 </blockquote>
-<h2 id="1-安装最新版的nodejs"><a href="#1-安装最新版的nodejs" class="headerlink" title="1.安装最新版的nodejs"></a>1.安装最新版的nodejs</h2><p>###更新ubuntu软件源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install -y python-software-properties software-properties-common</div><div class="line">sudo add-apt-repository ppa:chris-lea/node.js</div><div class="line">sudo apt-get update</div></pre></td></tr></table></figure></p>
-<p>###安装nodejs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install nodejs</div><div class="line">sudo apt install nodejs-legacy</div><div class="line">sudo apt install npm</div></pre></td></tr></table></figure></p>
+<h2 id="1-安装最新版的nodejs"><a href="#1-安装最新版的nodejs" class="headerlink" title="1.安装最新版的nodejs"></a>1.安装最新版的nodejs</h2><h4 id="更新ubuntu软件源"><a href="#更新ubuntu软件源" class="headerlink" title="更新ubuntu软件源"></a>更新ubuntu软件源</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install -y python-software-properties software-properties-common</div><div class="line">sudo add-apt-repository ppa:chris-lea/node.js</div><div class="line">sudo apt-get update</div></pre></td></tr></table></figure>
+<h4 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install nodejs</div><div class="line">sudo apt install nodejs-legacy</div><div class="line">sudo apt install npm</div></pre></td></tr></table></figure>
 <p>简单说明一下，apt和apt-get没什么大区别，apt有逐渐替代apt-get的趋势。</p>
 <p>我们安装的npm是Node.js的包管理工具（node.js package manager），我们为何需要一个包管理工具呢？因为我们在Node.js上开发时，会用到很多别人写的JavaScript代码，如果我们要使用别人写的某个包，每次都根据名称搜索一下官方网站，下载代码，解压，再使用，非常繁琐。于是一个集中管理的工具应运而生：大家都把自己开发的模块打包后放到npm官网上，如果要使用，直接通过npm安装就可以直接用，不用管代码存在哪，应该从哪下载。</p>
 <p>更重要的是，如果我们要使用模块A，而模块A又依赖于模块B，模块B又依赖于模块X和模块Y，npm可以根据依赖关系，把所有依赖的包都下载下来并管理起来。否则，靠我们自己手动管理，肯定既麻烦又容易出错。</p>
-<p>###更新npm的包镜像源，方便快速下载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm config set registry https://registry.npm.taobao.org</div><div class="line">sudo npm config list</div></pre></td></tr></table></figure></p>
-<p>###全局安装n管理器（用于管理nodejs版本）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install n -g</div></pre></td></tr></table></figure></p>
-<p>###安装最新的nodejs（stable版本）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo n stable</div><div class="line">sudo node -v</div></pre></td></tr></table></figure></p>
-<p>##2.安装HEXO<br>在node.js与git都创建好后，在系统中创建一个文件夹，假定命名为blogs，在安装hexo前进入blogs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo</div><div class="line">hexo init   --初始化hexo</div></pre></td></tr></table></figure></p>
-<p>##3.配置github以及本地文件<br>在github上必须建立与用户名对应的仓库，仓库名一定为user_name.github.io,这是固定写法，否则会出错。</p>
+<h4 id="更新npm的包镜像源，方便快速下载"><a href="#更新npm的包镜像源，方便快速下载" class="headerlink" title="更新npm的包镜像源，方便快速下载"></a>更新npm的包镜像源，方便快速下载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm config set registry https://registry.npm.taobao.org</div><div class="line">sudo npm config list</div></pre></td></tr></table></figure>
+<h4 id="全局安装n管理器（用于管理nodejs版本）"><a href="#全局安装n管理器（用于管理nodejs版本）" class="headerlink" title="全局安装n管理器（用于管理nodejs版本）"></a>全局安装n管理器（用于管理nodejs版本）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install n -g</div></pre></td></tr></table></figure>
+<h4 id="安装最新的nodejs（stable版本）"><a href="#安装最新的nodejs（stable版本）" class="headerlink" title="安装最新的nodejs（stable版本）"></a>安装最新的nodejs（stable版本）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo n stable</div><div class="line">sudo node -v</div></pre></td></tr></table></figure>
+<h2 id="2-安装HEXO"><a href="#2-安装HEXO" class="headerlink" title="2.安装HEXO"></a>2.安装HEXO</h2><p>在node.js与git都创建好后，在系统中创建一个文件夹，假定命名为blogs，在安装hexo前进入blogs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo</div><div class="line">hexo init   --初始化hexo</div></pre></td></tr></table></figure></p>
+<h2 id="3-配置github以及本地文件"><a href="#3-配置github以及本地文件" class="headerlink" title="3.配置github以及本地文件"></a>3.配置github以及本地文件</h2><p>在github上必须建立与用户名对应的仓库，仓库名一定为user_name.github.io,这是固定写法，否则会出错。</p>
 <p>在github上创建好仓库后要与本地的文件夹创建关联，在blogs目录下有一个名为<strong>_config.yml</strong>的配置文件，这个文件在后期配置博客的许多属性中都要用到。</p>
 <p>这里我们打开该配置文件在文件末尾添加如下几句话，这几句话是将本地文件夹与github上的文件夹相关联，从而本地的博客正确部署到github上。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">    type:git</div><div class="line">    repo:https://github.com/user_name/user_name.github.io.git    --语句中的user_name一定要用实际的用户名替代</div><div class="line">    branch:master</div></pre></td></tr></table></figure></p>
 <p>之后安装deployer部署软件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
-<p>##4.测试运行<br>由于hexo本身自带一篇介绍供我们调试运行，故我们暂时不建立新文件。</p>
+<h2 id="4-测试运行"><a href="#4-测试运行" class="headerlink" title="4.测试运行"></a>4.测试运行</h2><p>由于hexo本身自带一篇介绍供我们调试运行，故我们暂时不建立新文件。</p>
 <p>我们通过下面的第一条命令生成可在浏览器中正确显示的文件，第二条命令则为打开服务器，默认端口为4000，若4000端口被占用，我们可以修改<strong>_config.yml</strong>文件中的端口，一般情况下如果我们非正常终止就可能出现端口被占用的情况，所以建议在本地浏览完成之后按下 CTRL+C 正常终止命令。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
 <p>当然，上面两条命令也可以简化为下面的形式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s -g</div></pre></td></tr></table></figure></p>
 <p>如果在本地能够正常显示，那我们接下来要做的是将其部署到github上，部署命令为以下三条<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
 <p>建议每次部署都加上hexo clean命令，减少出错的可能性<br>当然，命令hexo generate与hexo deploy同样可以简化为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d -g</div></pre></td></tr></table></figure></p>
 <p>如果我们能在网络上打开的网页与端口调试时的网页一致，那么我们的hexo网页搭建就成功了。</p>
-<p>##5.在搭建过程中遇到的错误</p>
-<h3 id="ERROR1-NPM-Permission-Denied"><a href="#ERROR1-NPM-Permission-Denied" class="headerlink" title="ERROR1:NPM:Permission Denied"></a><strong>ERROR1</strong>:NPM:Permission Denied</h3><p>npm在安装Hexo时，报错：<br><code>cannot create highlight_alias.json: Permission denied</code></p>
+<h2 id="5-在搭建过程中遇到的错误"><a href="#5-在搭建过程中遇到的错误" class="headerlink" title="5.在搭建过程中遇到的错误"></a>5.在搭建过程中遇到的错误</h2><h3 id="ERROR1-NPM-Permission-Denied"><a href="#ERROR1-NPM-Permission-Denied" class="headerlink" title="ERROR1:NPM:Permission Denied"></a><strong>ERROR1</strong>:NPM:Permission Denied</h3><p>npm在安装Hexo时，报错：<br><code>cannot create highlight_alias.json: Permission denied</code></p>
 <p>通过查阅相关资料，找到了解决办法，在安装Hexo前执行如下一句：<br><code>npm config set unsafe-perm true</code></p>
-<p>###<strong>ERROR2</strong>:部署时报错并卡死<br>在部署软件正确安装的情况下，如果出现这种情况，可以尝试将blogs下的隐藏文件夹<strong>.deploy_git</strong>文件删除，再重新部署，在大多数情况下问题都能解决。<br>我在其他博文中看到有些人换了电脑写Hexo，在部署时同样会遇到这样的问题，这个时候也是用这种方法解决。</p>
+<h3 id="ERROR2-部署时报错并卡死"><a href="#ERROR2-部署时报错并卡死" class="headerlink" title="ERROR2:部署时报错并卡死"></a><strong>ERROR2</strong>:部署时报错并卡死</h3><p>在部署软件正确安装的情况下，如果出现这种情况，可以尝试将blogs下的隐藏文件夹<strong>.deploy_git</strong>文件删除，再重新部署，在大多数情况下问题都能解决。<br>我在其他博文中看到有些人换了电脑写Hexo，在部署时同样会遇到这样的问题，这个时候也是用这种方法解决。</p>
 <p>附Hexo其他常用命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postname&quot;  --新建文章</div><div class="line">hexo new page &quot;pagename&quot;  --新建页面</div><div class="line">hexo help --查看帮助</div><div class="line">hexo version --查看hexo版本</div></pre></td></tr></table></figure></p>
 
       
@@ -557,7 +555,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装最新版的nodejs"><span class="nav-number">1.</span> <span class="nav-text">1.安装最新版的nodejs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ERROR1-NPM-Permission-Denied"><span class="nav-number">1.1.</span> <span class="nav-text">ERROR1:NPM:Permission Denied</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置环境"><span class="nav-number">1.</span> <span class="nav-text">配置环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装最新版的nodejs"><span class="nav-number">2.</span> <span class="nav-text">1.安装最新版的nodejs</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#更新ubuntu软件源"><span class="nav-number">2.0.1.</span> <span class="nav-text">更新ubuntu软件源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装nodejs"><span class="nav-number">2.0.2.</span> <span class="nav-text">安装nodejs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新npm的包镜像源，方便快速下载"><span class="nav-number">2.0.3.</span> <span class="nav-text">更新npm的包镜像源，方便快速下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全局安装n管理器（用于管理nodejs版本）"><span class="nav-number">2.0.4.</span> <span class="nav-text">全局安装n管理器（用于管理nodejs版本）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装最新的nodejs（stable版本）"><span class="nav-number">2.0.5.</span> <span class="nav-text">安装最新的nodejs（stable版本）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装HEXO"><span class="nav-number">3.</span> <span class="nav-text">2.安装HEXO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-配置github以及本地文件"><span class="nav-number">4.</span> <span class="nav-text">3.配置github以及本地文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-测试运行"><span class="nav-number">5.</span> <span class="nav-text">4.测试运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-在搭建过程中遇到的错误"><span class="nav-number">6.</span> <span class="nav-text">5.在搭建过程中遇到的错误</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ERROR1-NPM-Permission-Denied"><span class="nav-number">6.1.</span> <span class="nav-text">ERROR1:NPM:Permission Denied</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ERROR2-部署时报错并卡死"><span class="nav-number">6.2.</span> <span class="nav-text">ERROR2:部署时报错并卡死</span></a></li></ol></li></ol></div>
             
 
           </div>
