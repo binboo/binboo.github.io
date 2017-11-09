@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：   如何更换themes包 如何对网站主页背景颜色以及其他细节修改 如何插入外链音乐与图片 如何在主页中建立其他页面   更换themes包由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去Hexo主题库去寻找自己喜欢的主题。12cd  your_">
+<meta name="description" content="上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：   如何更换themes包 如何对网站主页背景颜色以及其他细节修改 如何插入外链音乐与图片 如何在主页中建立其他页面    更换themes包由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去Hexo主题库去寻找自己喜欢的主题。12cd  your">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用HEXO建立个人静态网站(二)">
 <meta property="og:url" content="http://yoursite.com/2017/11/09/second-blog-hexo-deploy-second/index.html">
 <meta property="og:site_name" content="Chauncy Li">
-<meta property="og:description" content="上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：   如何更换themes包 如何对网站主页背景颜色以及其他细节修改 如何插入外链音乐与图片 如何在主页中建立其他页面   更换themes包由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去Hexo主题库去寻找自己喜欢的主题。12cd  your_">
+<meta property="og:description" content="上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：   如何更换themes包 如何对网站主页背景颜色以及其他细节修改 如何插入外链音乐与图片 如何在主页中建立其他页面    更换themes包由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去Hexo主题库去寻找自己喜欢的主题。12cd  your">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-09T13:13:33.929Z">
+<meta property="og:updated_time" content="2017-11-09T13:39:08.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用HEXO建立个人静态网站(二)">
-<meta name="twitter:description" content="上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：   如何更换themes包 如何对网站主页背景颜色以及其他细节修改 如何插入外链音乐与图片 如何在主页中建立其他页面   更换themes包由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去Hexo主题库去寻找自己喜欢的主题。12cd  your_">
+<meta name="twitter:description" content="上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：   如何更换themes包 如何对网站主页背景颜色以及其他细节修改 如何插入外链音乐与图片 如何在主页中建立其他页面    更换themes包由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去Hexo主题库去寻找自己喜欢的主题。12cd  your">
 
 
 
@@ -361,9 +361,11 @@
 <li>如何在主页中建立其他页面</li>
 </ul>
 </blockquote>
+<hr>
 <h2 id="更换themes包"><a href="#更换themes包" class="headerlink" title="更换themes包"></a>更换themes包</h2><p>由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去<a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo主题库</a>去寻找自己喜欢的主题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd  your_hexo_site</div><div class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure></p>
 <p>安装完成后需要进入个人博客文件夹下的<strong>_config.yml</strong>文件，寻找到下面的内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Extensions</div><div class="line">## Plugins: http://hexo.io/plugins/</div><div class="line">## Themes: http://hexo.io/themes/</div><div class="line">theme: next</div></pre></td></tr></table></figure></p>
 <p>将其中的主题改为你需要的主题名称。<br>至此，个人主题更换完成。</p>
+<hr>
 <h2 id="对网站细节进行修改"><a href="#对网站细节进行修改" class="headerlink" title="对网站细节进行修改"></a>对网站细节进行修改</h2><h3 id="1-更改博客标题以及其他主页信息"><a href="#1-更改博客标题以及其他主页信息" class="headerlink" title="1.更改博客标题以及其他主页信息"></a>1.更改博客标题以及其他主页信息</h3><p>这些内容的更改依然在博客根目录下的<strong>_config.yml</strong>进行修改，该步骤非常简单，不再赘述。</p>
 <h3 id="2-更改博客背景颜色（基于NEXT）"><a href="#2-更改博客背景颜色（基于NEXT）" class="headerlink" title="2.更改博客背景颜色（基于NEXT）"></a>2.更改博客背景颜色（基于NEXT）</h3><p>网站的背景颜色是主题本身的选项，因此关于网站配色以及其他细节的配置应在themes主题目录下，具体更改的文件见下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">themes/next/source/css/_common/outline/outline.styl</div></pre></td></tr></table></figure>
@@ -373,12 +375,14 @@
 <p>如果想要更改主题颜色，可以到以下文件中的colors代码段进行修改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">themes/next/source/css/_variables/base.styl</div></pre></td></tr></table></figure></p>
 <h3 id="3-隐藏网页底部powered-By-Hexo"><a href="#3-隐藏网页底部powered-By-Hexo" class="headerlink" title="3.隐藏网页底部powered By Hexo"></a>3.隐藏网页底部powered By Hexo</h3><p>打开以下文件,使用” &lt; !—  —&gt;”隐藏之间的代码即可，或者直接删除。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">youe_blog/themes/next/layout/_partials/footer.swig</div></pre></td></tr></table></figure></p>
 <h3 id="4-修改网站的缩略图标"><a href="#4-修改网站的缩略图标" class="headerlink" title="4.修改网站的缩略图标"></a>4.修改网站的缩略图标</h3><p>如果你感觉同一个主题所有的网站缩略图标都千篇一律的话，完全可以修改缩略图，我们只需进入如下文件夹，将我们喜欢的图标复制进入，修改其名称为默认图标名称，同时把默认图标删去或者改名即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">public/images</div></pre></td></tr></table></figure></p>
+<hr>
 <h2 id="插入外链音乐与图片"><a href="#插入外链音乐与图片" class="headerlink" title="插入外链音乐与图片"></a>插入外链音乐与图片</h2><blockquote>
 <ul>
 <li>外链音乐推荐网易云音乐web版，打开歌曲后可以看到醒目的<strong>生成外链播放器</strong>的一行字，同时有尺寸与播放模式供选择。</li>
-<li>图片建议尽量不要插入本地图片，我们可以将本地图片上传至云服务中再生成图片地址，这样的好处是使整个网站更加轻质。对于图片云存储服务推荐“七牛云”与“腾讯云”。</li>
+<li>图片建议尽量不要插入本地图片，我们可以将本地图片上传至云服务中再生成图片地址，这样的好处是使整个网站更加轻质。对于图片云存储服务推荐“<a href="https://www.qiniu.com/" target="_blank" rel="external">七牛云</a>”与“腾讯云”。</li>
 </ul>
 </blockquote>
+<hr>
 <h2 id="主页中建立其他页面"><a href="#主页中建立其他页面" class="headerlink" title="主页中建立其他页面"></a>主页中建立其他页面</h2><p>以建立标签页为例，在命令行中输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page &quot;tags&quot;</div></pre></td></tr></table></figure></p>
 <p>之后，进入themes/next/_config.yml文件中寻找到menu选项，添加一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tags:  /tags</div></pre></td></tr></table></figure></p>
 <p><strong>注意</strong>：这里的_config.yml是themes中的文件，不是博客根目录下的文件。</p>
