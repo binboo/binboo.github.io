@@ -352,56 +352,17 @@
       
         
           
-            <p>今天在复习“电磁场与电磁波”这门课的时候复习到“三种常用的正交坐标系”这一节，由于球体坐标系在无人机系统中有着很重要的作用，因此今天我对常用的三种坐标系做一个小结，也是自己对这方面知识的一个梳理。</p>
-<hr>
-<h2 id="直角坐标系"><a href="#直角坐标系" class="headerlink" title="直角坐标系"></a>直角坐标系</h2><p>在直角坐标系中，三个坐标变量x,y,z的变化范围分别为：<br>$$-∞&lt;x&lt;+∞$$ $$-∞&lt;y&lt;+∞$$ $$-∞&lt;z&lt;+∞$$<br>空间任意一点 $P(x_0,y_0,z_0)$ 是三个坐标曲面$x=x_0,y=y_0,z=z_0$的交点。</p>
-<p><img src="http://oywgahazb.bkt.clouddn.com/%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87%E7%B3%BB.jpg" alt="直角坐标系"></p>
-<p>其中三个互相正交的单位坐标矢量 <strong>ex，ey，ez</strong> 分别是x,y,z <strong>增加</strong> 的方向，且遵循右手螺旋法则，即<br>$$\vec{e_x}×\vec{e_y}=\vec{e_z}$$ $$\vec{e_y}×\vec{e_z}=\vec{e_x}$$ $$\vec{e_z}×\vec{e_x}=\vec{e_y}$$</p>
-<p>任一矢量在<strong>A</strong>在直角坐标系中可以表示为:<br>$$\vec{A}=\vec{e_x}A_x+\vec{e_y}A_y+\vec{e_z}A_z$$<br>其中Ax,Ay,Az分别为矢量$\vec{A}$在$e_x,e_y,e_z$方向上的投影。</p>
-<p>点乘和叉乘计算如下：<br>$$\vec{A}·\vec{B}=A_xB_x+A_yB_y+A_zB_z$$<br>$$\vec{A}×\vec{B}= \begin{vmatrix}\vec{e_x}&amp;\vec{e_y}&amp;\vec{e_z}\\A_x&amp;A_y&amp;A_z\\B_x&amp;B_y&amp;B_z\end{vmatrix}$$</p>
-<p>直角坐标系中位置矢量 $$\vec{r}=\vec{e_x}x+\vec{e_y}y+\vec{e_z}z$$<br>其微分为$$\mathrm{d}\vec{r}=\vec{e_x}\mathrm{d}x+\vec{e_y}dy+\vec{e_z}\mathrm{d}z$$<br>而与三个单位矢量相垂直的三个面积元分别为$$\mathrm{d}S_x=\mathrm{d}y\mathrm{d}z$$$$\mathrm{d}S_y=\mathrm{d}x\mathrm{d}z$$$$\mathrm{d}S_z=\mathrm{d}x\mathrm{d}y$$<br>体积元为：$$\mathrm{d}V=\mathrm{d}x\mathrm{d}y\mathrm{d}z$$</p>
-<h2 id="圆柱坐标系"><a href="#圆柱坐标系" class="headerlink" title="圆柱坐标系"></a>圆柱坐标系</h2><p>圆柱坐标系中三个坐标变量是$\rho,\phi和z$,他们的变化范围分别是：<br>$$0&lt;\rho&lt;∞，0≤\phi≤2\pi,-∞&lt;z&lt;+∞$$<br><img src="http://oywgahazb.bkt.clouddn.com/%E5%9C%86%E6%9F%B1%E5%9D%90%E6%A0%87%E7%B3%BB1.jpg" alt="圆柱坐标系图一"></p>
-<p>空间任意一点$P(\rho_0,\phi_0,z_0)$是如下三个坐标平面的交点:$\rho=\rho_0$的圆柱面、包含$z$轴并与$xz$平面构成夹角为$\phi=\phi_0$的半平面、$z=z_0$ 的平面。</p>
-<p>圆柱坐标系与直角坐标系的变换关系为：</p>
-<p>$$\rho=\sqrt{x^2+y^2},\phi=arctan(y/x),z=z$$ 或 $$x=\rho cos\phi,y=\rho sin\phi,z=z$$</p>
-<p>在圆柱坐标系中，过空间任意一点 $P(\rho,\phi,z)$的三个相互正交的单位矢量$e_\rho$、$e_\phi$、$e_z$分别是 $\rho$、$\phi$、$z$增加的方向，<br>且遵循右手螺旋法则，即<br>$$ \vec{e_\rho} × \vec{e_\phi} =\vec{e_z},\vec{e_\phi} × \vec{e_z} = \vec{e_\rho},\vec{e_z} × \vec{e_\rho} = \vec{e_\phi}$$</p>
-<hr>
-<p><strong>注意：</strong>坐标单位矢量 $e_\rho$ 和 $e_\phi$ 都不是常矢量，因为他们的<strong>方向</strong>是随空间坐标变化的。</p>
-<p>$\vec{e_\rho}、\vec{e_\phi}、\vec{e_z}与\vec{e_x}、\vec{e_y}、\vec{e_z}$ 之间的变化关系为：<br>$$\begin{bmatrix}\vec{e_\rho}\\ \vec{e_\phi}\\ \vec{e_z}\end{bmatrix}=A\begin{bmatrix} \vec{e_x}\\ \vec{e_y}\\ \vec{e_z}\end{bmatrix}$$<br>其中</p>
-<p>$$A=\begin{bmatrix}cos \phi&amp;sin \phi&amp;0 \\-sin \phi&amp;cos \phi&amp;0\\0&amp;0&amp;1\end{bmatrix}$$</p>
-<p>注意到，A为<strong>单位正交矩阵</strong>，故 $A^T=A^{-1}$ ,即</p>
-<p>$$\begin{bmatrix}\vec{e_x}\\ \vec{e_y}\\ \vec{e_z}\end{bmatrix}=A^T\begin{bmatrix} \vec{e_\rho}\\ \vec{e_\phi}\\ \vec{e_z}\end{bmatrix}$$</p>
-<p>由于 $\vec{e_\rho}与\vec{e_\phi}均随\phi变化$ ，根据上面的公式，可以求得： $$\frac{\partial \vec{e_\rho}}{\partial \phi}=-\vec{e_x} sin \phi + \vec{e_y} cos \phi = \vec{e_\phi}$$ $$\frac{\partial \vec{e_\phi}}{\partial \phi}=-\vec{e_x} cos \phi - \vec{e_y} sin \phi =- \vec{e_\rho}$$<br>任意矢量<strong>A</strong>在圆柱坐标系中可以表示为 $$\vec{A}=\vec{e_\rho} A_\rho + \vec{e_\phi} A_\phi + \vec{e_z} A_z$$<br>其中， $A_\rho,A_\phi,A_z分别为矢量\vec{A}在\vec{e_\rho}、\vec{e_\phi}、\vec{e_z}$ 方向上的投影</p>
-<p>点乘和叉乘运算如下：<br>$$\vec{A}·\vec{B}=A_\rho B_\rho+A_\phi B_\phi + A_z B_z$$</p>
-<p>$$\vec{A}×\vec{B}= \begin{vmatrix}\vec{e_\rho}&amp;\vec{e_\phi}&amp;\vec{e_z}\\A_\rho&amp;A_\phi&amp;A_z\\B_\rho&amp;B_\phi&amp;B_z\end{vmatrix}$$</p>
-<p>在圆柱坐标系中位置矢量为<br>$$\vec{r}=\vec{e_\rho} \rho + \vec{e_z} z$$<br>其微分元为（这里用到全微分公式： $\mathrm{d} \vec{u}=\frac{\partial u}{\partial x} \mathrm{d} x +\frac{\partial u}{\partial y} \mathrm{d} y + \frac{\partial u}{\partial z} \mathrm{d} z$ ）</p>
-<p>$$\mathrm{d} \vec{r}=\vec{e_\rho} \mathrm{d}\rho+\vec{e_\phi}\rho \mathrm{d}\phi+\vec{e_z} \mathrm{d}z $$</p>
-<p>它在 $\rho,\phi和z$ 增加方向上的微分元分别是 $\mathrm{d}\rho、\rho\mathrm{d} \phi、\mathrm{d}z$ ,如下图所示。<img src="http://oywgahazb.bkt.clouddn.com/%E5%9C%86%E6%9F%B1%E5%9D%90%E6%A0%87%E7%B3%BB2.jpg" alt="圆柱坐标系2"><br>将它们与各自微分之比称为度量系数（或拉梅系数），即</p>
-<p>$$h_\rho=\frac{\mathrm{d} \rho}{\mathrm{d} \rho}=1,h_\phi=\frac{\rho \mathrm{d} \phi}{\mathrm{d} \phi}=\rho,h_z=\frac{\mathrm{d} z}{\mathrm{d} z}=1 $$</p>
-<p>在圆柱坐标系中，与三个坐标单位矢量相垂直的三个面积元分别为<br>$$\mathrm{d}S_\rho=\rho\mathrm{d}\phi\mathrm{d}z,\mathrm{d}S_\phi=\mathrm{d}\rho\mathrm{d}z,\mathrm{d}S_z=\rho\mathrm{d}\rho\mathrm{d}\phi$$<br>体积元为$$\mathrm{d}V=\rho\mathrm{d}\rho\mathrm{d}\phi\mathrm{d}z $$</p>
-<h2 id="球坐标系"><a href="#球坐标系" class="headerlink" title="球坐标系"></a>球坐标系</h2><p>在球坐标系中，三个变量$r,\theta,\phi$的取值范围分别为：$$0≤r＜+∞，0≤\theta≤\pi,0≤\phi≤2\pi$$如下图所示</p>
-<p><img src="http://oywgahazb.bkt.clouddn.com/%E7%90%83%E9%9D%A2%E5%9D%90%E6%A0%87%E7%B3%BB1.jpg" alt="球坐标系1"></p>
-<p>可以看到空间任意一点$P_0(r_0,\theta_0,\phi_0)$是如下三个坐标曲面的交点：</p>
-<blockquote>
-<ul>
-<li>球心在原点，半径为$r=r_0$的球面</li>
-<li>顶点在原点，轴线与z轴重合且半顶角$\theta=\theta_0$的圆锥面</li>
-<li>包含$z$轴且与$xz$平面构成夹角为$\phi=\phi_0$的半平面</li>
-</ul>
-</blockquote>
-<p>球坐标系与直角坐标系之间的变换关系为<br>$$r=\sqrt{x^2+y^2+z^2},\theta=arccos(z/\sqrt{x^2+y^2+z^2}),\phi=arctan(y/x)$$<br>$$x=rsin \theta cos \phi,y=rsin \theta sin \phi,z=rcos \theta$$</p>
-<p>在球坐标系中，过空间任一点$P(r,\theta，\phi)$三个互相垂直的坐标单位矢量$\vec{e_r},\vec{e_\theta},\vec{e_\phi}$分别是$r,\theta,\phi$增加的方向，且遵循右手螺旋法则，即<br>$$\vec{e_r} × \vec{e_\theta} =\vec{e_\phi},\vec{e_\theta} × \vec{e_\phi} = \vec{e_r}, \vec{e_\phi} × \vec{e_r} = \vec{e_\theta} $$<br>它们与$\vec{e_x}、\vec{e_y}、\vec{e_z}$之间的变化关系为：<br>$$\begin{bmatrix}\vec{e_r}\\ \vec{e_\theta}\\ \vec{e_\phi}\end{bmatrix}=A\begin{bmatrix} \vec{e_x}\\ \vec{e_y}\\ \vec{e_z}\end{bmatrix}$$<br>其中,$$A=\begin{bmatrix}sin \theta cos \phi &amp; sin \theta sin \phi &amp; cos \theta \\ cos \theta cos \phi &amp; cos \theta sin \phi &amp; -sin \theta \\ -sin \phi &amp; cos \phi &amp; 0 \end{bmatrix}$$<br>由于A为单位正交矩阵，所以$A^T=A^{-1}$,故有：<br>$$ \begin{bmatrix} \vec{e_x}\\ \vec{e_y}\\ \vec{e_z}\end{bmatrix}=A^T \begin{bmatrix}\vec{e_r}\\ \vec{e_\theta}\\ \vec{e_\phi}\end{bmatrix}$$</p>
-<p><strong>记忆小诀窍</strong>：旋转矩阵A看似很难记忆，实际是很有规律的，我们一个参数一个参数记忆，先以行看$\theta$，诀窍为<strong>“sin sin cos;cos cos -sin”</strong>,这组还是很容易记忆的，而后再以列看$\phi$，第一列与$\theta$第二行一致，第二列与$\theta$第一行一致，即<strong>“cos cos -sin;sin sin cos”</strong>，最后在第三列第三行补零，旋转矩阵就完全写出来了。</p>
-<p>球坐标系的单位坐标矢量$\vec{e_r},\vec{e_\theta},\vec{e_\phi}$都不是常矢量，且<br>$$\frac{\partial \vec{e_r}}{\partial \theta}=\vec{e_ \theta}$$<br>$$\frac{\partial \vec{e_\theta}}{\partial \theta}=-\vec{e_ r} $$<br>$$\frac{\partial \vec{e_\phi}}{\partial \theta}=0$$<br>$$\frac{\partial \vec{e_r}}{\partial \phi}=\vec{e_ \phi}sin \theta$$<br>$$\frac{\partial \vec{e_\theta}}{\partial \phi}=\vec{e_ \phi}cos \theta$$<br>$$\frac{\partial \vec{e_\phi}}{\partial \phi}=-\vec{e_ r}sin \theta-\vec{e_ \phi}cos \theta$$</p>
-<p><strong>记忆小技巧</strong>：前三个式子是对$\theta$求偏导，将球坐标系中的$\theta$类比成圆柱坐标系中的$\phi$，则可以类比得到前两个式子，第三个式子为零；后三个式子是对$\phi$求偏导,第四个和第五个具有对称形式，第六个可以先看成第四个式子将$\vec{e_\phi}换成$$\vec{e_r},然后与第五个式子求和再取相反数。</p>
-<p>任一矢量$\vec{A}$在球坐标系中可以表示为<br>$$\vec{A}=\vec{e_r}A_r+\vec{e_\theta}A_\theta+\vec{e_\phi}A_\phi$$<br>其中，$A_r,A_\theta,A_\phi$分别为矢量$vec{A}在\vec{e_r}，\vec{e_\theta}，\vec{e_\phi}$方向上的投影。</p>
-<p>点乘和叉乘运算如下：<br>$$\vec{A}·\vec{B}=A_r B_r+A_\theta B_\theta+A_\phi B_\phi $$<br>$$\vec{A}×\vec{B}= \begin{vmatrix}\vec{e_r}&amp;\vec{e_\theta}&amp;\vec{e_\phi}\\A_r&amp;A_\theta&amp;A_\phi\\B_r&amp;B_\theta&amp;B_\phi\end{vmatrix}$$</p>
-<p>在球坐标系中位置矢量为<br>$$\vec{r}=\vec{e_r}r$$<br>其微分元为（这里用到全微分公式：$\mathrm{d} \vec{u}=\frac{\partial u}{\partial x} \mathrm{d} x +\frac{\partial u}{\partial y} \mathrm{d} y + \frac{\partial u}{\partial z} \mathrm{d} z$）<br>$$\mathrm{d} \vec{r}=\vec{e_r} \mathrm{d}r+\vec{e_\theta}r \mathrm{d}\theta+\vec{e_\phi}rsin \theta \mathrm{d}\phi $$<br>如下图所示：<br><img src="http://oywgahazb.bkt.clouddn.com/%E7%90%83%E9%9D%A2%E5%9D%90%E6%A0%87%E7%B3%BB2.jpg" alt="球坐标系2"><br>故$Lame$系数分别为$$h_r=1;h_\theta=r;h_\phi=r sin \theta$$<br>在球坐标系中，三个面积元分别为<br>$$\mathrm{d}S_r=r^2sin \theta \mathrm{d} \theta \mathrm{d} \phi$$<br>$$\mathrm{d}S_ \theta=r sin \theta \mathrm{d}r \mathrm{d} \phi$$<br>$$\mathrm{d}S_ \phi= r \mathrm{d}r \mathrm{d}\theta$$<br>体积元<br>$$\mathrm{d}V_r=r^2sin\theta\mathrm{d}r\mathrm{d}\theta\mathrm{d}\phi$$</p>
-<hr>
-<p>这篇博客终于写完了，其实我本意是想总结正交坐标系的同时熟练一下mathjax的语法，但是我发现写这样一篇大量数学公式的博客真的太费劲了，我贴一张图来说明我的工作场景。以后再也不这样干了，心疼的抱住自己一秒。至于mathjax如何在hexo中启动以及我用mathjax遇到的一些问题中增加。<br>距离写上一段话的时间又过了好几个小时，终于把渲染搞好了，真的难受，我一定要在文章里好好记录。</p>
-<p><img src="http://oywgahazb.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20171110203800.jpg" alt="工作场景"></p>
+          今天在复习“电磁场与电磁波”这门课的时候复习到“三种常用的正交坐标系”这一节，由于球体坐标系在无人机系统中有着很重要的作用，因此今天我对常用的三种坐标系做一个小结，也是自己对这方面知识的一个梳理。
 
-          
+直角坐标系在直角坐标系中，三个坐标变量x,y,z的变化范围分别为：$$-∞&lt;x&lt;+∞$$
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/10/electromagnetic_wave_first_three_coordinate_systems/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -541,43 +502,25 @@
       
         
           
-            <p>上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：</p>
-<blockquote>
-<ul>
-<li>如何更换themes包</li>
-<li>如何对网站主页背景颜色以及其他细节修改</li>
-<li>如何插入外链音乐与图片</li>
-<li>如何在主页中建立其他页面</li>
-</ul>
-</blockquote>
-<hr>
-<h2 id="更换themes包"><a href="#更换themes包" class="headerlink" title="更换themes包"></a>更换themes包</h2><p>由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去<a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo主题库</a>去寻找自己喜欢的主题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd  your_hexo_site</div><div class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure></p>
-<p>安装完成后需要进入个人博客文件夹下的<strong>_config.yml</strong>文件，寻找到下面的内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Extensions</div><div class="line">## Plugins: http://hexo.io/plugins/</div><div class="line">## Themes: http://hexo.io/themes/</div><div class="line">theme: next</div></pre></td></tr></table></figure></p>
-<p>将其中的主题改为你需要的主题名称。<br>至此，个人主题更换完成。</p>
-<hr>
-<h2 id="对网站细节进行修改"><a href="#对网站细节进行修改" class="headerlink" title="对网站细节进行修改"></a>对网站细节进行修改</h2><h3 id="1-更改博客标题以及其他主页信息"><a href="#1-更改博客标题以及其他主页信息" class="headerlink" title="1.更改博客标题以及其他主页信息"></a>1.更改博客标题以及其他主页信息</h3><p>这些内容的更改依然在博客根目录下的<strong>_config.yml</strong>进行修改，该步骤非常简单，不再赘述。</p>
-<h3 id="2-更改博客背景颜色（基于NEXT）"><a href="#2-更改博客背景颜色（基于NEXT）" class="headerlink" title="2.更改博客背景颜色（基于NEXT）"></a>2.更改博客背景颜色（基于NEXT）</h3><p>网站的背景颜色是主题本身的选项，因此关于网站配色以及其他细节的配置应在themes主题目录下，具体更改的文件见下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">themes/next/source/css/_common/outline/outline.styl</div></pre></td></tr></table></figure>
-<p>在该文件的开端，有这样的一句配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">html, body &#123; height: 100%;</div><div class="line">	 background: #FFFFFF; &#125;</div></pre></td></tr></table></figure>
-<p>其中的#FFFFFF即为背景颜色，全1为纯白色，我将其改为#F0F0F0，效果见我的博客背景颜色。</p>
-<p>如果想要更改主题颜色，可以到以下文件中的colors代码段进行修改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">themes/next/source/css/_variables/base.styl</div></pre></td></tr></table></figure></p>
-<h3 id="3-隐藏网页底部powered-By-Hexo"><a href="#3-隐藏网页底部powered-By-Hexo" class="headerlink" title="3.隐藏网页底部powered By Hexo"></a>3.隐藏网页底部powered By Hexo</h3><p>打开以下文件,使用” &lt; !—  —&gt;”隐藏之间的代码即可，或者直接删除。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">youe_blog/themes/next/layout/_partials/footer.swig</div></pre></td></tr></table></figure></p>
-<h3 id="4-修改网站的缩略图标"><a href="#4-修改网站的缩略图标" class="headerlink" title="4.修改网站的缩略图标"></a>4.修改网站的缩略图标</h3><p>如果你感觉同一个主题所有的网站缩略图标都千篇一律的话，完全可以修改缩略图，我们只需进入如下文件夹，将我们喜欢的图标复制进入，修改其名称为默认图标名称，同时把默认图标删去或者改名即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">public/images</div></pre></td></tr></table></figure></p>
-<hr>
-<h2 id="插入外链音乐与图片"><a href="#插入外链音乐与图片" class="headerlink" title="插入外链音乐与图片"></a>插入外链音乐与图片</h2><blockquote>
-<ul>
-<li>外链音乐推荐网易云音乐web版，打开歌曲后可以看到醒目的<strong>生成外链播放器</strong>的一行字，同时有尺寸与播放模式供选择。</li>
-<li>图片建议尽量不要插入本地图片，我们可以将本地图片上传至云服务中再生成图片地址，这样的好处是使整个网站更加轻质。对于图片云存储服务推荐“<a href="https://www.qiniu.com/" target="_blank" rel="external">七牛云</a>”与“腾讯云”。</li>
-</ul>
-</blockquote>
-<hr>
-<h2 id="主页中建立其他页面"><a href="#主页中建立其他页面" class="headerlink" title="主页中建立其他页面"></a>主页中建立其他页面</h2><p>以建立标签页为例，在命令行中输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page &quot;tags&quot;</div></pre></td></tr></table></figure></p>
-<p>之后，进入themes/next/_config.yml文件中寻找到menu选项，添加一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tags:  /tags</div></pre></td></tr></table></figure></p>
-<p><strong>注意</strong>：这里的_config.yml是themes中的文件，不是博客根目录下的文件。</p>
-<p>关于Hexo的搭建与简单配置就介绍到这里，关于域名绑定以及其他配置本文中不再介绍。</p>
+          上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：
 
-          
+
+如何更换themes包
+如何对网站主页背景颜色以及其他细节修改
+如何插入外链音乐与图片
+如何在主页中建立其他页面
+
+
+
+更换themes包由于我是用的是NEXT主题，因此本文以Next
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/09/second-blog-hexo-deploy-second/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -717,49 +660,22 @@
       
         
           
-            <p>由于HEXO的快速强大的功能受到人们广泛的关注，前两天我利用课余时间搭建了自己的个人博客网站，我采用HEXO搭建个人网站主要是基于以下几点考虑：</p>
-<blockquote>
-<ul>
-<li><p>个人博客用户访问量不大，没有太多功能方面的要求，采用没有数据库支持的静态博客完全可行</p>
-</li>
-<li><p>HEXO支持轻量级的MARKDOWN语法。</p>
-</li>
-<li><p>符合开源精神，自主操控性较强，是一个自由、安静、个性化的写作平台。</p>
-</li>
-</ul>
-</blockquote>
-<p>下面我就搭建过程中的主要步骤以及搭建过程中遇到的错误做一些说明（以下内容全部基于UBUNTU 16.04）：</p>
-<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><blockquote>
-<ul>
-<li><strong>安装Node.js</strong><br>作用：生成静态页面</li>
-<li><strong>安装git</strong><br>作用：把本地的hexo提交到github上。<br>（本篇博文默认git已经配置好，包括SSH Keys）</li>
-</ul>
-</blockquote>
-<h2 id="1-安装最新版的nodejs"><a href="#1-安装最新版的nodejs" class="headerlink" title="1.安装最新版的nodejs"></a>1.安装最新版的nodejs</h2><h4 id="更新ubuntu软件源"><a href="#更新ubuntu软件源" class="headerlink" title="更新ubuntu软件源"></a>更新ubuntu软件源</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install -y python-software-properties software-properties-common</div><div class="line">sudo add-apt-repository ppa:chris-lea/node.js</div><div class="line">sudo apt-get update</div></pre></td></tr></table></figure>
-<h4 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install nodejs</div><div class="line">sudo apt install nodejs-legacy</div><div class="line">sudo apt install npm</div></pre></td></tr></table></figure>
-<p>简单说明一下，apt和apt-get没什么大区别，apt有逐渐替代apt-get的趋势。</p>
-<p>我们安装的npm是Node.js的包管理工具（node.js package manager），我们为何需要一个包管理工具呢？因为我们在Node.js上开发时，会用到很多别人写的JavaScript代码，如果我们要使用别人写的某个包，每次都根据名称搜索一下官方网站，下载代码，解压，再使用，非常繁琐。于是一个集中管理的工具应运而生：大家都把自己开发的模块打包后放到npm官网上，如果要使用，直接通过npm安装就可以直接用，不用管代码存在哪，应该从哪下载。</p>
-<p>更重要的是，如果我们要使用模块A，而模块A又依赖于模块B，模块B又依赖于模块X和模块Y，npm可以根据依赖关系，把所有依赖的包都下载下来并管理起来。否则，靠我们自己手动管理，肯定既麻烦又容易出错。</p>
-<h4 id="更新npm的包镜像源，方便快速下载"><a href="#更新npm的包镜像源，方便快速下载" class="headerlink" title="更新npm的包镜像源，方便快速下载"></a>更新npm的包镜像源，方便快速下载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm config set registry https://registry.npm.taobao.org</div><div class="line">sudo npm config list</div></pre></td></tr></table></figure>
-<h4 id="全局安装n管理器（用于管理nodejs版本）"><a href="#全局安装n管理器（用于管理nodejs版本）" class="headerlink" title="全局安装n管理器（用于管理nodejs版本）"></a>全局安装n管理器（用于管理nodejs版本）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install n -g</div></pre></td></tr></table></figure>
-<h4 id="安装最新的nodejs（stable版本）"><a href="#安装最新的nodejs（stable版本）" class="headerlink" title="安装最新的nodejs（stable版本）"></a>安装最新的nodejs（stable版本）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo n stable</div><div class="line">sudo node -v</div></pre></td></tr></table></figure>
-<h2 id="2-安装HEXO"><a href="#2-安装HEXO" class="headerlink" title="2.安装HEXO"></a>2.安装HEXO</h2><p>在node.js与git都创建好后，在系统中创建一个文件夹，假定命名为blogs，在安装hexo前进入blogs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo</div><div class="line">hexo init   --初始化hexo</div></pre></td></tr></table></figure></p>
-<h2 id="3-配置github以及本地文件"><a href="#3-配置github以及本地文件" class="headerlink" title="3.配置github以及本地文件"></a>3.配置github以及本地文件</h2><p>在github上必须建立与用户名对应的仓库，仓库名一定为user_name.github.io,这是固定写法，否则会出错。</p>
-<p>在github上创建好仓库后要与本地的文件夹创建关联，在blogs目录下有一个名为<strong>_config.yml</strong>的配置文件，这个文件在后期配置博客的许多属性中都要用到。</p>
-<p>这里我们打开该配置文件在文件末尾添加如下几句话，这几句话是将本地文件夹与github上的文件夹相关联，从而本地的博客正确部署到github上。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">    type:git</div><div class="line">    repo:https://github.com/user_name/user_name.github.io.git    --语句中的user_name一定要用实际的用户名替代</div><div class="line">    branch:master</div></pre></td></tr></table></figure></p>
-<p>之后安装deployer部署软件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
-<h2 id="4-测试运行"><a href="#4-测试运行" class="headerlink" title="4.测试运行"></a>4.测试运行</h2><p>由于hexo本身自带一篇介绍供我们调试运行，故我们暂时不建立新文件。</p>
-<p>我们通过下面的第一条命令生成可在浏览器中正确显示的文件，第二条命令则为打开服务器，默认端口为4000，若4000端口被占用，我们可以修改<strong>_config.yml</strong>文件中的端口，一般情况下如果我们非正常终止就可能出现端口被占用的情况，所以建议在本地浏览完成之后按下 CTRL+C 正常终止命令。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
-<p>当然，上面两条命令也可以简化为下面的形式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s -g</div></pre></td></tr></table></figure></p>
-<p>如果在本地能够正常显示，那我们接下来要做的是将其部署到github上，部署命令为以下三条<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
-<p>建议每次部署都加上hexo clean命令，减少出错的可能性<br>当然，命令hexo generate与hexo deploy同样可以简化为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d -g</div></pre></td></tr></table></figure></p>
-<p>如果我们能在网络上打开的网页与端口调试时的网页一致，那么我们的hexo网页搭建就成功了。</p>
-<h2 id="5-在搭建过程中遇到的错误"><a href="#5-在搭建过程中遇到的错误" class="headerlink" title="5.在搭建过程中遇到的错误"></a>5.在搭建过程中遇到的错误</h2><h3 id="ERROR1-NPM-Permission-Denied"><a href="#ERROR1-NPM-Permission-Denied" class="headerlink" title="ERROR1:NPM:Permission Denied"></a><strong>ERROR1</strong>:NPM:Permission Denied</h3><p>npm在安装Hexo时，报错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cannot create highlight_alias.json: Permission denied</div></pre></td></tr></table></figure></p>
-<p>通过查阅相关资料，找到了解决办法，在安装Hexo前执行如下一句：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config set unsafe-perm true</div></pre></td></tr></table></figure></p>
-<h3 id="ERROR2-部署时报错并卡死"><a href="#ERROR2-部署时报错并卡死" class="headerlink" title="ERROR2:部署时报错并卡死"></a><strong>ERROR2</strong>:部署时报错并卡死</h3><p>在部署软件正确安装的情况下，如果出现这种情况，可以尝试将blogs下的隐藏文件夹<strong>.deploy_git</strong>文件删除，再重新部署，在大多数情况下问题都能解决。<br>我在其他博文中看到有些人换了电脑写Hexo，在部署时同样会遇到这样的问题，这个时候也是用这种方法解决。</p>
-<p>附Hexo其他常用命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postname&quot;  --新建文章</div><div class="line">hexo new page &quot;pagename&quot;  --新建页面</div><div class="line">hexo help --查看帮助</div><div class="line">hexo version --查看hexo版本</div></pre></td></tr></table></figure></p>
+          由于HEXO的快速强大的功能受到人们广泛的关注，前两天我利用课余时间搭建了自己的个人博客网站，我采用HEXO搭建个人网站主要是基于以下几点考虑：
 
-          
+
+个人博客用户访问量不大，没有太多功能方面的要求，采用没有数据库支持的静态博客完全可行
+
+HEXO支持轻量级的MARKDOWN语法。
+
+符合开源精神，自
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/08/second-blog-hexo-deploy-first/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -899,10 +815,15 @@
       
         
           
-            <p>其实我在很久以前就想过搭建自己的博客，虽然这是一件很简单的事情，但由于自己一直拖着这件事，导致到今天我才开始搭建，之前也搞过apache上的wordpress,但由于自己长时间不维护失去了续租服务器的动力，因此之前的博客就废掉了。现在越来越多的朋友开始用Hexo搭建博客，这确实是一个自由安静的地方，我搭建这个博客惟一的目的就是让它见证我的变化，我不需要谁来关注我，一人一世界，足矣。<br>今天上午还有电机实验，两天以后就是期中考试了，人们都在复习，可我竟然还在瞎折腾，时间不早了，大概上午电机实验要睡过去了。<br><img src="http://oywgahazb.bkt.clouddn.com/walk.jpg" alt="long_journey"></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=429450375&auto=0&height=32"></iframe>
-
-          
+          其实我在很久以前就想过搭建自己的博客，虽然这是一件很简单的事情，但由于自己一直拖着这件事，导致到今天我才开始搭建，之前也搞过apache上的wordpress,但由于自己长时间不维护失去了续租服务器的动力，因此之前的博客就废掉了。现在越来越多的朋友开始用Hexo搭建博客，这确实是一个自由安静的地方，
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/04/fist_blog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
