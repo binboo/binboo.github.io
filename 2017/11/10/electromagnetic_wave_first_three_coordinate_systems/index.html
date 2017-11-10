@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E7%90%83%E9%9D%A2%E5%9D%90%E6%A0%87%E7%B3%BB1.jpg">
 <meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E7%90%83%E9%9D%A2%E5%9D%90%E6%A0%87%E7%B3%BB2.jpg">
 <meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20171110203800.jpg">
-<meta property="og:updated_time" content="2017-11-10T14:59:56.501Z">
+<meta property="og:updated_time" content="2017-11-10T15:04:12.791Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三种常用的正交坐标系">
 <meta name="twitter:description" content="今天在复习“电磁场与电磁波”这门课的时候复习到“三种常用的正交坐标系”这一节，由于球体坐标系在无人机系统中有着很重要的作用，因此今天我对常用的三种坐标系做一个小结，也是自己对这方面知识的一个梳理。  直角坐标系在直角坐标系中，三个坐标变量x,y,z的变化范围分别为：$$-∞&amp;lt;x&amp;lt;+∞$$ $$-∞&amp;lt;y&amp;lt;+∞$$ $$-∞&amp;lt;z&amp;lt;+∞$$空间任意一点 $P(x_0,">
@@ -375,7 +375,7 @@
 <hr>
 <p><strong>注意：</strong>坐标单位矢量 $e_\rho$ 和 $e_\phi$ 都不是常矢量，因为他们的<strong>方向</strong>是随空间坐标变化的。</p>
 <p>$\vec{e_\rho}、\vec{e_\phi}、\vec{e_z}与\vec{e_x}、\vec{e_y}、\vec{e_z}$ 之间的变化关系为：<br>$$\begin{bmatrix}\vec{e_\rho}\\ \vec{e_\phi}\\ \vec{e_z}\end{bmatrix}=A\begin{bmatrix} \vec{e_x}\\ \vec{e_y}\\ \vec{e_z}\end{bmatrix}$$<br>其中</p>
-<p>$$A=\begin{bmatrix}cos \phi&amp;sin \phi&amp;0 \ -sin \phi&amp;cos \phi&amp;0\\0&amp;0&amp;1\end{bmatrix}$$</p>
+<p>$$A=\begin{bmatrix}cos \phi&amp;sin \phi&amp;0 \\-sin \phi&amp;cos \phi&amp;0\\0&amp;0&amp;1\end{bmatrix}$$</p>
 <p>注意到，A为<strong>单位正交矩阵</strong>，故 $A^T=A^{-1}$ ,即</p>
 <p>$$\begin{bmatrix}\vec{e_x}\\ \vec{e_y}\\ \vec{e_z}\end{bmatrix}=A^T\begin{bmatrix} \vec{e_\rho}\\ \vec{e_\phi}\\ \vec{e_z}\end{bmatrix}$$</p>
 <p>由于 $\vec{e_\rho}与\vec{e_\phi}均随\phi变化$ ，根据上面的公式，可以求得： $$\frac{\partial \vec{e_\rho}}{\partial \phi}=-\vec{e_x} sin \phi + \vec{e_y} cos \phi = \vec{e_\phi}$$ $$\frac{\partial \vec{e_\phi}}{\partial \phi}=-\vec{e_x} cos \phi - \vec{e_y} sin \phi =- \vec{e_\rho}$$<br>任意矢量<strong>A</strong>在圆柱坐标系中可以表示为 $$\vec{A}=\vec{e_\rho} A_\rho + \vec{e_\phi} A_\phi + \vec{e_z} A_z$$<br>其中， $A_\rho,A_\phi,A_z分别为矢量\vec{A}在\vec{e_\rho}、\vec{e_\phi}、\vec{e_z}$ 方向上的投影</p>
@@ -405,7 +405,7 @@
 <p>点乘和叉乘运算如下：<br>$$\vec{A}·\vec{B}=A_r B_r+A_\theta B_\theta+A_\phi B_\phi $$<br>$$\vec{A}×\vec{B}= \begin{vmatrix}\vec{e_r}&amp;\vec{e_\theta}&amp;\vec{e_\phi}\\A_r&amp;A_\theta&amp;A_\phi\\B_r&amp;B_\theta&amp;B_\phi\end{vmatrix}$$</p>
 <p>在球坐标系中位置矢量为<br>$$\vec{r}=\vec{e_r}r$$<br>其微分元为（这里用到全微分公式：$\mathrm{d} \vec{u}=\frac{\partial u}{\partial x} \mathrm{d} x +\frac{\partial u}{\partial y} \mathrm{d} y + \frac{\partial u}{\partial z} \mathrm{d} z$）<br>$$\mathrm{d} \vec{r}=\vec{e_r} \mathrm{d}r+\vec{e_\theta}r \mathrm{d}\theta+\vec{e_\phi}rsin \theta \mathrm{d}\phi $$<br>如下图所示：<br><img src="http://oywgahazb.bkt.clouddn.com/%E7%90%83%E9%9D%A2%E5%9D%90%E6%A0%87%E7%B3%BB2.jpg" alt="球坐标系2"><br>故$Lame$系数分别为$$h_r=1;h_\theta=r;h_\phi=r sin \theta$$<br>在球坐标系中，三个面积元分别为<br>$$\mathrm{d}S_r=r^2sin \theta \mathrm{d} \theta \mathrm{d} \phi$$<br>$$\mathrm{d}S_ \theta=r sin \theta \mathrm{d}r \mathrm{d} \phi$$<br>$$\mathrm{d}S_ \phi= r \mathrm{d}r \mathrm{d}\theta$$<br>体积元<br>$$\mathrm{d}V_r=r^2sin\theta\mathrm{d}r\mathrm{d}\theta\mathrm{d}\phi$$</p>
 <hr>
-<p>这篇博客终于写完了，其实我本意是想总结正交坐标系的同时熟练一下mathjax的语法，但是我发现写这样一篇大量数学公式的博客真的太费劲了，我贴一张图来说明我的工作场景。以后再也不这样干了，心疼的抱住自己一秒。至于mathjax如何在hexo中启动以及我用mathjax遇到的一些问题已经在<strong>HEXO搭建个人网站（二）</strong>中增加。<br>距离写上一段话的时间又过了好几个小时，终于把渲染搞好了，真的难受，我一定要在文章里好好记录。</p>
+<p>这篇博客终于写完了，其实我本意是想总结正交坐标系的同时熟练一下mathjax的语法，但是我发现写这样一篇大量数学公式的博客真的太费劲了，我贴一张图来说明我的工作场景。以后再也不这样干了，心疼的抱住自己一秒。至于mathjax如何在hexo中启动以及我用mathjax遇到的一些问题中增加。<br>距离写上一段话的时间又过了好几个小时，终于把渲染搞好了，真的难受，我一定要在文章里好好记录。</p>
 <p><img src="http://oywgahazb.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20171110203800.jpg" alt="工作场景"></p>
 
       
