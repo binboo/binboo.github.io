@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：   如何更换themes包 如何对网站主页背景颜色以及其他细节修改 如何插入外链音乐与图片 如何在主页中建立其他页面    更换themes包由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去Hexo主题库去寻找自己喜欢的主题。12cd  your">
+<meta name="description" content="上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：   如何更换themes包 如何对网站主页背景颜色以及其他细节修改 如何插入外链音乐与图片 如何在主页中建立其他页面 如何折叠NEXT主题主页内容 Mathjax正确渲染    更换themes包由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去H">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用HEXO建立个人静态网站(二)">
 <meta property="og:url" content="http://yoursite.com/2017/11/09/second-blog-hexo-deploy-second/index.html">
 <meta property="og:site_name" content="Chauncy Li">
-<meta property="og:description" content="上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：   如何更换themes包 如何对网站主页背景颜色以及其他细节修改 如何插入外链音乐与图片 如何在主页中建立其他页面    更换themes包由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去Hexo主题库去寻找自己喜欢的主题。12cd  your">
+<meta property="og:description" content="上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：   如何更换themes包 如何对网站主页背景颜色以及其他细节修改 如何插入外链音乐与图片 如何在主页中建立其他页面 如何折叠NEXT主题主页内容 Mathjax正确渲染    更换themes包由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去H">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-09T13:39:08.595Z">
+<meta property="og:updated_time" content="2017-11-10T15:54:08.601Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用HEXO建立个人静态网站(二)">
-<meta name="twitter:description" content="上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：   如何更换themes包 如何对网站主页背景颜色以及其他细节修改 如何插入外链音乐与图片 如何在主页中建立其他页面    更换themes包由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去Hexo主题库去寻找自己喜欢的主题。12cd  your">
+<meta name="twitter:description" content="上一节主要介绍了如何搭建HEXO个人网站以及本人在搭建过程中遇到的一些错误，这一节主要介绍的内容包括以下几点：   如何更换themes包 如何对网站主页背景颜色以及其他细节修改 如何插入外链音乐与图片 如何在主页中建立其他页面 如何折叠NEXT主题主页内容 Mathjax正确渲染    更换themes包由于我是用的是NEXT主题，因此本文以Next为例进行介绍，其他主题的配置方法类似，可以去H">
 
 
 
@@ -359,6 +359,8 @@
 <li>如何对网站主页背景颜色以及其他细节修改</li>
 <li>如何插入外链音乐与图片</li>
 <li>如何在主页中建立其他页面</li>
+<li>如何折叠NEXT主题主页内容</li>
+<li>Mathjax正确渲染</li>
 </ul>
 </blockquote>
 <hr>
@@ -386,6 +388,26 @@
 <h2 id="主页中建立其他页面"><a href="#主页中建立其他页面" class="headerlink" title="主页中建立其他页面"></a>主页中建立其他页面</h2><p>以建立标签页为例，在命令行中输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page &quot;tags&quot;</div></pre></td></tr></table></figure></p>
 <p>之后，进入themes/next/_config.yml文件中寻找到menu选项，添加一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tags:  /tags</div></pre></td></tr></table></figure></p>
 <p><strong>注意</strong>：这里的_config.yml是themes中的文件，不是博客根目录下的文件。</p>
+<h2 id="折叠主页内容"><a href="#折叠主页内容" class="headerlink" title="折叠主页内容"></a>折叠主页内容</h2><p>打开<strong>主题</strong>中的_config.yml文件，搜索关键字“auto_excerpt”，找到如下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">auto_excerpt:</div><div class="line">enable: false</div><div class="line">length: 150</div></pre></td></tr></table></figure></p>
+<p>把enable改为对应的false改为true，即可完成主页折叠。</p>
+<h2 id="Mathjax正确渲染"><a href="#Mathjax正确渲染" class="headerlink" title="Mathjax正确渲染"></a>Mathjax正确渲染</h2><p>网上关于Mathjax渲染的问题有很多回答，有一些博客中的方法是错误的，他们说问题在于渲染引擎marked的渲染问题，我跟着这些博客去做以后并没有解决问题，下面我就介绍为何hexo默认渲染不正确以及如何实现Mathjax的正确渲染。</p>
+<p>错误原因：<br>hexo默认先用marked.js渲染，然后再交给Mathjax渲染。所以对于两种语法冲突的部分就会出现Mathjax要渲染的部分已经被marked.js错误渲染的情况。在marked.js渲染的时候<strong>下划线_</strong>是被escape掉并且换成了<em>标签，即斜体字，另外LaTeX中的\\也会被转义成一个\，这样会导致MathJax渲染时不认为它是一个换行符了。</em></p>
+<p>分析错误：</p>
+<blockquote>
+<ul>
+<li>对于下划线，我们可以取消其斜体转移，因为markdown语法中还有*也可斜体转义，我们只要习惯*的斜体转义就好。</li>
+<li>对个别字符的二次转义，我们不要让marked.js去转义\\,{,}等在MathJax中有特殊用途的字符。</li>
+</ul>
+</blockquote>
+<p>解决方案：<br>我们用打开文件marked.js,其目录如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">博客目录/node_modules/marked/lib/</div></pre></td></tr></table></figure></p>
+<p>打开文件后搜索到escape一行,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">escape: /^\\([\\`*&#123;&#125;\[\]()# +\-.!_&gt;])/,</div></pre></td></tr></table></figure></p>
+<p>替换为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">escape: /^\\([`*\[\]()# +\-.!_&gt;])/,</div></pre></td></tr></table></figure></p>
+<p>这一步是在原基础上取消了对\\,{,}的转义(escape)</p>
+<p>再搜索到em一行,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</div></pre></td></tr></table></figure></p>
+<p>替换为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</div></pre></td></tr></table></figure></p>
+<p>完毕。<br>最后要提醒的是，这一切都是基于博客主题目录（不是根目录）下的配置文件_config.yml中的Mathjax引擎开启的情况下，即<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># MathJax Support</div><div class="line">mathjax:</div><div class="line">  enable: true</div><div class="line">  per_page: true</div></pre></td></tr></table></figure></p>
+<p>之后，我们在文章的Front-matte中加入如下一句话：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mathjax: true     --注意冒号和后面的内容中间一定要有空格</div></pre></td></tr></table></figure></p>
+<hr>
 <p>关于Hexo的搭建与简单配置就介绍到这里，关于域名绑定以及其他配置本文中不再介绍。</p>
 
       
@@ -563,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#更换themes包"><span class="nav-number">1.</span> <span class="nav-text">更换themes包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对网站细节进行修改"><span class="nav-number">2.</span> <span class="nav-text">对网站细节进行修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-更改博客标题以及其他主页信息"><span class="nav-number">2.1.</span> <span class="nav-text">1.更改博客标题以及其他主页信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-更改博客背景颜色（基于NEXT）"><span class="nav-number">2.2.</span> <span class="nav-text">2.更改博客背景颜色（基于NEXT）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-隐藏网页底部powered-By-Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">3.隐藏网页底部powered By Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-修改网站的缩略图标"><span class="nav-number">2.4.</span> <span class="nav-text">4.修改网站的缩略图标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入外链音乐与图片"><span class="nav-number">3.</span> <span class="nav-text">插入外链音乐与图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主页中建立其他页面"><span class="nav-number">4.</span> <span class="nav-text">主页中建立其他页面</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#更换themes包"><span class="nav-number">1.</span> <span class="nav-text">更换themes包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对网站细节进行修改"><span class="nav-number">2.</span> <span class="nav-text">对网站细节进行修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-更改博客标题以及其他主页信息"><span class="nav-number">2.1.</span> <span class="nav-text">1.更改博客标题以及其他主页信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-更改博客背景颜色（基于NEXT）"><span class="nav-number">2.2.</span> <span class="nav-text">2.更改博客背景颜色（基于NEXT）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-隐藏网页底部powered-By-Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">3.隐藏网页底部powered By Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-修改网站的缩略图标"><span class="nav-number">2.4.</span> <span class="nav-text">4.修改网站的缩略图标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入外链音乐与图片"><span class="nav-number">3.</span> <span class="nav-text">插入外链音乐与图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主页中建立其他页面"><span class="nav-number">4.</span> <span class="nav-text">主页中建立其他页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#折叠主页内容"><span class="nav-number">5.</span> <span class="nav-text">折叠主页内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mathjax正确渲染"><span class="nav-number">6.</span> <span class="nav-text">Mathjax正确渲染</span></a></li></ol></div>
             
 
           </div>
