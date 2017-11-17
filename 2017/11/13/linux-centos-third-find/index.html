@@ -82,14 +82,14 @@
 <meta name="description" content="文件搜索命令本文中介绍如下几个文件搜索命令   find locate which whereis grep    文件搜索命令findfind命令所在路径为/bin/find，其格式如下： 1find [搜索范围] [选项] [匹配条件] 注意，find命令选项(参数)的位置比较怪，它在搜索范围与匹配条件中间。 find命令有很多参数可以选择，这里介绍如下几个参数   -name   以文件名查">
 <meta name="keywords" content="CentOS命令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文件搜索命令">
+<meta property="og:title" content="Linux文件搜索命令">
 <meta property="og:url" content="http://yoursite.com/2017/11/13/linux-centos-third-find/index.html">
 <meta property="og:site_name" content="Chauncy Li">
 <meta property="og:description" content="文件搜索命令本文中介绍如下几个文件搜索命令   find locate which whereis grep    文件搜索命令findfind命令所在路径为/bin/find，其格式如下： 1find [搜索范围] [选项] [匹配条件] 注意，find命令选项(参数)的位置比较怪，它在搜索范围与匹配条件中间。 find命令有很多参数可以选择，这里介绍如下几个参数   -name   以文件名查">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-13T15:15:37.128Z">
+<meta property="og:updated_time" content="2017-11-17T15:00:05.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文件搜索命令">
+<meta name="twitter:title" content="Linux文件搜索命令">
 <meta name="twitter:description" content="文件搜索命令本文中介绍如下几个文件搜索命令   find locate which whereis grep    文件搜索命令findfind命令所在路径为/bin/find，其格式如下： 1find [搜索范围] [选项] [匹配条件] 注意，find命令选项(参数)的位置比较怪，它在搜索范围与匹配条件中间。 find命令有很多参数可以选择，这里介绍如下几个参数   -name   以文件名查">
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>文件搜索命令 | Chauncy Li</title>
+  <title>Linux文件搜索命令 | Chauncy Li</title>
   
 
 
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">文件搜索命令</h1>
+          <h1 class="post-title" itemprop="name headline">Linux文件搜索命令</h1>
         
 
         <div class="post-meta">
@@ -461,6 +461,7 @@
 <p>可以看出，该命令没有别名，且命令只能被超级用户使用。</p>
 <hr>
 <h2 id="命令搜索命令whereis"><a href="#命令搜索命令whereis" class="headerlink" title="命令搜索命令whereis"></a>命令搜索命令whereis</h2><p>该命令格式与which相同，结果显示命令的绝对路径，但不显示命令的别名，取而代之的是关于该命令的帮助文档。</p>
+<p><strong>注意</strong>：whereis不仅可以查看命令目录，同时也可以查看<strong>配置文件目录</strong>，而which无法查看配置文件目录。</p>
 <hr>
 <h2 id="文件内容搜索命令grep"><a href="#文件内容搜索命令grep" class="headerlink" title="文件内容搜索命令grep"></a>文件内容搜索命令grep</h2><p>如果一定要说搜索命令中哪两个最重要，那一定是find和grep了。</p>
 <p>grep和前面命令有着本质区别，其功能描述如下：<br><strong>在文件中搜索字符串匹配的行并输出该行。</strong><br>这句话中关键词有：文件中，输出行。</p>
@@ -515,8 +516,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/17/linux-centos-fourth-ls/" rel="prev" title="Linux目录操作命令">
-                Linux目录操作命令 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/17/linux-centos-fourth-ls/" rel="prev" title="Linux目录操作命令及帮助命令">
+                Linux目录操作命令及帮助命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
