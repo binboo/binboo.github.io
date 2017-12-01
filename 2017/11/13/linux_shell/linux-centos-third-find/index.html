@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CentOS命令," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="文件搜索命令本文中介绍如下几个文件搜索命令   find locate which whereis grep    文件搜索命令findfind命令所在路径为/bin/find，其格式如下： 1find [搜索范围] [选项] [匹配条件] 注意，find命令选项(参数)的位置比较怪，它在搜索范围与匹配条件中间。 find命令有很多参数可以选择，这里介绍如下几个参数   -name   以文件名查">
+<meta name="keywords" content="CentOS命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux文件搜索命令">
+<meta property="og:url" content="http://yoursite.com/2017/11/13/linux_shell/linux-centos-third-find/index.html">
+<meta property="og:site_name" content="Chauncy Li">
+<meta property="og:description" content="文件搜索命令本文中介绍如下几个文件搜索命令   find locate which whereis grep    文件搜索命令findfind命令所在路径为/bin/find，其格式如下： 1find [搜索范围] [选项] [匹配条件] 注意，find命令选项(参数)的位置比较怪，它在搜索范围与匹配条件中间。 find命令有很多参数可以选择，这里介绍如下几个参数   -name   以文件名查">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-17T15:00:05.799Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux文件搜索命令">
+<meta name="twitter:description" content="文件搜索命令本文中介绍如下几个文件搜索命令   find locate which whereis grep    文件搜索命令findfind命令所在路径为/bin/find，其格式如下： 1find [搜索范围] [选项] [匹配条件] 注意，find命令选项(参数)的位置比较怪，它在搜索范围与匹配条件中间。 find命令有很多参数可以选择，这里介绍如下几个参数   -name   以文件名查">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/13/linux_shell/linux-centos-third-find/"/>
+
+
+
+
+
+  <title>Linux文件搜索命令 | Chauncy Li</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Chauncy Li</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">这是一个无人问津的世外桃源。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/13/linux_shell/linux-centos-third-find/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chauncy Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chauncy Li">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Linux文件搜索命令</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-13T23:10:16+08:00">
+                2017-11-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/IT技术/" itemprop="url" rel="index">
+                    <span itemprop="name">IT技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="文件搜索命令"><a href="#文件搜索命令" class="headerlink" title="文件搜索命令"></a>文件搜索命令</h1><p>本文中介绍如下几个文件搜索命令</p>
+<blockquote>
+<ul>
+<li>find</li>
+<li>locate</li>
+<li>which</li>
+<li>whereis</li>
+<li>grep</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="文件搜索命令find"><a href="#文件搜索命令find" class="headerlink" title="文件搜索命令find"></a>文件搜索命令find</h2><p>find命令所在路径为/bin/find，其格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find [搜索范围] [选项] [匹配条件]</div></pre></td></tr></table></figure>
+<p>注意，find命令<strong>选项</strong>(参数)的位置比较怪，它在搜索范围与匹配条件中间。</p>
+<p>find命令有很多参数可以选择，这里介绍如下几个参数</p>
+<blockquote>
+<ul>
+<li>-name   以文件名查找</li>
+<li>-size   以大小查找</li>
+<li>-user  -group  根据所有者，所属组查找</li>
+<li>-amin -cmin -mmin   根据时间查找</li>
+<li>-a -o   条件满足查找</li>
+<li>-type   根据文件类型查找</li>
+<li>-inum   根据i节点查找</li>
+<li>-exec/-ok 对操作结果执行操作</li>
+</ul>
+</blockquote>
+<h3 id="name选项"><a href="#name选项" class="headerlink" title="-name选项"></a>-name选项</h3><p>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$find /etc -name init</div></pre></td></tr></table></figure></p>
+<p>注意，此处为精准搜索，与”init”不能有任何差别。</p>
+<p>这里介绍通配符的概念，来匹配模糊搜索：</p>
+<blockquote>
+<ul>
+<li>通配符 * 表示匹配任意多个字符（包括零个）</li>
+<li>通配符 ? 表示匹配单个字符。</li>
+</ul>
+</blockquote>
+<p>因此，像*init*表示文件名中包含init的文件，init*表示以init开头的文件。</p>
+<p>但这里还有一个问题，由于Linux严格区分大小写字母，但有的时候我们并不希望查找时区分大小写，因此linux的find命令提供了一个<strong>-inmae</strong>选项，这样find就不再区分大小写了(Linux的许多查找命令中-i均为不区分大小写的选项)。</p>
+<h3 id="size选项"><a href="#size选项" class="headerlink" title="-size选项"></a>-size选项</h3><p>-size选项为查找指定大小的文件，举一个例子具体说明其含义：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find /etc -size +204800</div></pre></td></tr></table></figure></p>
+<p>-size后面跟着的是要查找的文件大小 </p>
+<blockquote>
+<ul>
+<li>+n表示查找大于指定大小n的文件</li>
+<li>-n表示查找小于指定大小n的文件</li>
+<li>n表示查找等于指定大小n的文件（这个比较可笑，一般不用到）</li>
+</ul>
+</blockquote>
+<p>这个例子的含义是查找/etc下大于100M的文件，大家可能会疑问为什么是100M，不应该是200M吗，要解释清楚这个问题，我们需要明白数据块的概念：</p>
+<blockquote>
+<ul>
+<li><strong>数据块</strong>是find大小查找命令中的基本单元，一个数据据块为512字节，也即0.5KB，因此我们在算出文件是多少KB之后再乘2得到的大小才能写到-size后面。</li>
+</ul>
+</blockquote>
+<p>100MB=102400KB=204800数据块，因此命令中写的是204800。</p>
+<h3 id="user与-group"><a href="#user与-group" class="headerlink" title="-user与-group"></a>-user与-group</h3><p>命令格式为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ find [查找目录] -user [用户]</div><div class="line">$ find [查找目录] -group [组]</div></pre></td></tr></table></figure></p>
+<p>这两个命令意为在指定目录下查找属于某用户（组）的全部文件。<br>这里需要注意的是命令中的用户与组一定是已经存在的，否则命令无法正常执行</p>
+<h3 id="amin-cmin-mmin"><a href="#amin-cmin-mmin" class="headerlink" title="-amin -cmin -mmin"></a>-amin -cmin -mmin</h3><p>该命令为按时间属性查找文件</p>
+<blockquote>
+<ul>
+<li>-amin为按访问时间查找，英文全称为assess_minute</li>
+<li>-cmin为按文件属性查找，英文全称为change_minute</li>
+<li>-mmin为按文件内容查找，英文全称为modify_minute</li>
+</ul>
+</blockquote>
+<p>举例如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find /etc -cmin -5</div></pre></td></tr></table></figure></p>
+<p>该命令为查找/etc目录下文件属性修改小于5min的文件。</p>
+<h3 id="a-o"><a href="#a-o" class="headerlink" title="-a -o"></a>-a -o</h3><p>-a为and的缩写，该属性表示前后的条件均满足<br>-o为or的缩写，该属性表示前后条件满足一个即可</p>
+<h3 id="type"><a href="#type" class="headerlink" title="-type"></a>-type</h3><p>该选项意为按照文件类型查找，后面可以跟</p>
+<blockquote>
+<ul>
+<li>f 查找类型为 文件</li>
+<li>d 查找类型为 目录</li>
+<li>l 查找类型为 软链接文件</li>
+</ul>
+</blockquote>
+<h3 id="inum"><a href="#inum" class="headerlink" title="-inum"></a>-inum</h3><p>表示按照i节点查找</p>
+<p>该查找选项的作用通常有以下两个：</p>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> 删除一些文件名复杂的文件</li>
+<li style="list-style: none"><input type="checkbox" checked> 查找某文件是否存在硬链接</li>
+</ul>
+<h3 id="exec-ok"><a href="#exec-ok" class="headerlink" title="-exec/-ok"></a>-exec/-ok</h3><p>这两个选项的作用为对查找结果执行操作，例子如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find /etc -name inittab -exec ls -l &#123;&#125; \;</div></pre></td></tr></table></figure></p>
+<p>该命令作用为在/etc下查找inittab文件并显示其详细信息，其中写在命令末尾的{} \;为固定格式。注意这里的斜杠\与linux目录斜杠/不一致。</p>
+<p>-ok选项与-exec选项的区别在于：-ok选项对每一个查找到的文件执行询问操作，y则执行，n则不执行。而-exec则没有这一询问，对所有查找到的文件直接执行后面的命令。因此，对于一些涉及删除的重要操作，用-ok命令可以保证万无一失。</p>
+<hr>
+<h2 id="文件搜索命令locate"><a href="#文件搜索命令locate" class="headerlink" title="文件搜索命令locate"></a>文件搜索命令locate</h2><p>命令格式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">locate [搜索文件名]</div></pre></td></tr></table></figure></p>
+<p><strong>搜索原理</strong>：locate搜索命令的机理与find不同，locate不在整个硬盘中搜索文件，而是建立了一个定期更新的文件资料库，找文件时候直接在资料库中寻找。</p>
+<p><strong>优势</strong>：搜索速度较find快很多（类似于win上的everything）</p>
+<p><strong>劣势</strong>：对于新建立的文件并没有更新到资料库中，因此无法找到新建立的文件。</p>
+<p><strong>适用场景</strong>：locate命令最好的应用场合就是搜索一些长期存在的系统文件。</p>
+<p>locate手动更新资料库命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">updatadb</div></pre></td></tr></table></figure></p>
+<p>当我们新建立一个文件时locate并不能搜索到它，但如果我们手动更新资料库，我们就能用locate搜索到新建文件了。</p>
+<p>locate也有-i选项，意为不区分大小写搜索。</p>
+<hr>
+<h2 id="命令搜索命令which"><a href="#命令搜索命令which" class="headerlink" title="命令搜索命令which"></a>命令搜索命令which</h2><p>命令格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">which [所查找命令]</div></pre></td></tr></table></figure>
+<p>which命令会给我们返回所查找命令的别名以及命令的位置。</p>
+<blockquote>
+<ul>
+<li>通过命令的位置我即可判断该命令是否可被普通用户使用。（在/bin或/usr/bin目录下是所有用户都能使用的命令，存放在/sbin以及/usr/bin下面的是超级用户才能使用的命令）</li>
+<li>通过别名我们可以看出命令默认的参数。（Linux中执行命令实际上是先去找它的别名去执行，如果没有别名就执行命令本身）</li>
+</ul>
+</blockquote>
+<p>输入which ls命令，返回结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alias ls=&apos;ls --color=auto&apos;</div><div class="line">        /usr/bin/ls</div></pre></td></tr></table></figure></p>
+<p>可以看出该命令可被所有用户使用。</p>
+<p>输入which useradd命令，返回结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/sbin/useradd</div></pre></td></tr></table></figure></p>
+<p>可以看出，该命令没有别名，且命令只能被超级用户使用。</p>
+<hr>
+<h2 id="命令搜索命令whereis"><a href="#命令搜索命令whereis" class="headerlink" title="命令搜索命令whereis"></a>命令搜索命令whereis</h2><p>该命令格式与which相同，结果显示命令的绝对路径，但不显示命令的别名，取而代之的是关于该命令的帮助文档。</p>
+<p><strong>注意</strong>：whereis不仅可以查看命令目录，同时也可以查看<strong>配置文件目录</strong>，而which无法查看配置文件目录。</p>
+<hr>
+<h2 id="文件内容搜索命令grep"><a href="#文件内容搜索命令grep" class="headerlink" title="文件内容搜索命令grep"></a>文件内容搜索命令grep</h2><p>如果一定要说搜索命令中哪两个最重要，那一定是find和grep了。</p>
+<p>grep和前面命令有着本质区别，其功能描述如下：<br><strong>在文件中搜索字符串匹配的行并输出该行。</strong><br>这句话中关键词有：文件中，输出行。</p>
+<p>该命令格式与我们前面所讲的命令find不同，“文件目录”在命令后面写着而不是前面写着，具体格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep [待查找的字符串] [所在的文件目录]</div></pre></td></tr></table></figure>
+<p>这里介绍grep的两个参数</p>
+<blockquote>
+<ul>
+<li>grep -i  不区分大小写查找（特别常用）</li>
+<li>grep -v 屏蔽查找字符串所在的行（反向查找verse） </li>
+</ul>
+</blockquote>
+<p>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -v ^# /etc/inittab</div></pre></td></tr></table></figure></p>
+<p>其中^的意思是后面的字符必须在行首，这句命令的意思是删除/etc/inittab文件下行首为#的行，即删除所有注释行。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CentOS命令/" rel="tag"># CentOS命令</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/11/2017-11-11/" rel="next" title="双11随笔">
+                <i class="fa fa-chevron-left"></i> 双11随笔
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/17/linux_shell/linux-centos-fourth-ls/" rel="prev" title="Linux目录操作命令及帮助命令">
+                Linux目录操作命令及帮助命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Chauncy Li</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文件搜索命令"><span class="nav-number">1.</span> <span class="nav-text">文件搜索命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件搜索命令find"><span class="nav-number">1.1.</span> <span class="nav-text">文件搜索命令find</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#name选项"><span class="nav-number">1.1.1.</span> <span class="nav-text">-name选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#size选项"><span class="nav-number">1.1.2.</span> <span class="nav-text">-size选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#user与-group"><span class="nav-number">1.1.3.</span> <span class="nav-text">-user与-group</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#amin-cmin-mmin"><span class="nav-number">1.1.4.</span> <span class="nav-text">-amin -cmin -mmin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#a-o"><span class="nav-number">1.1.5.</span> <span class="nav-text">-a -o</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#type"><span class="nav-number">1.1.6.</span> <span class="nav-text">-type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inum"><span class="nav-number">1.1.7.</span> <span class="nav-text">-inum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exec-ok"><span class="nav-number">1.1.8.</span> <span class="nav-text">-exec/-ok</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件搜索命令locate"><span class="nav-number">1.2.</span> <span class="nav-text">文件搜索命令locate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令搜索命令which"><span class="nav-number">1.3.</span> <span class="nav-text">命令搜索命令which</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令搜索命令whereis"><span class="nav-number">1.4.</span> <span class="nav-text">命令搜索命令whereis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件内容搜索命令grep"><span class="nav-number">1.5.</span> <span class="nav-text">文件内容搜索命令grep</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chauncy Li</span>
+
+  
+</div>
+
+
+<!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+-->
+
+
+
+<!--<div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+-->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>

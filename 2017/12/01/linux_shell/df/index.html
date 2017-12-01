@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CentOS命令," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="用户管理命令本节介绍如下几个用户管理命令：   useradd passwd who w   useradd功能：添加用户命令所在路径： /usr/sbin/useradd（可用which或whereis查看）由于命令在sbin里，故只有root用户有创建用户的权限。命令格式：1useradd [用户名] passwd功能：为用户修改密码。命令格式：1passwd [用户] 注意：passwd比密">
+<meta name="keywords" content="CentOS命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux用户管理命令，压缩命令及网络命令">
+<meta property="og:url" content="http://yoursite.com/2017/12/01/linux_shell/df/index.html">
+<meta property="og:site_name" content="Chauncy Li">
+<meta property="og:description" content="用户管理命令本节介绍如下几个用户管理命令：   useradd passwd who w   useradd功能：添加用户命令所在路径： /usr/sbin/useradd（可用which或whereis查看）由于命令在sbin里，故只有root用户有创建用户的权限。命令格式：1useradd [用户名] passwd功能：为用户修改密码。命令格式：1passwd [用户] 注意：passwd比密">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-01T14:15:45.002Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux用户管理命令，压缩命令及网络命令">
+<meta name="twitter:description" content="用户管理命令本节介绍如下几个用户管理命令：   useradd passwd who w   useradd功能：添加用户命令所在路径： /usr/sbin/useradd（可用which或whereis查看）由于命令在sbin里，故只有root用户有创建用户的权限。命令格式：1useradd [用户名] passwd功能：为用户修改密码。命令格式：1passwd [用户] 注意：passwd比密">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/12/01/linux_shell/df/"/>
+
+
+
+
+
+  <title>Linux用户管理命令，压缩命令及网络命令 | Chauncy Li</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Chauncy Li</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">这是一个无人问津的世外桃源。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/01/linux_shell/df/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chauncy Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chauncy Li">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Linux用户管理命令，压缩命令及网络命令</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-01T22:11:01+08:00">
+                2017-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/IT技术/" itemprop="url" rel="index">
+                    <span itemprop="name">IT技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="用户管理命令"><a href="#用户管理命令" class="headerlink" title="用户管理命令"></a>用户管理命令</h2><p>本节介绍如下几个用户管理命令：</p>
+<blockquote>
+<ul>
+<li>useradd</li>
+<li>passwd</li>
+<li>who</li>
+<li>w</li>
+</ul>
+</blockquote>
+<h3 id="useradd"><a href="#useradd" class="headerlink" title="useradd"></a>useradd</h3><p>功能：添加用户<br>命令所在路径： /usr/sbin/useradd（可用which或whereis查看）<br>由于命令在sbin里，故只有root用户有创建用户的权限。<br>命令格式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">useradd [用户名]</div></pre></td></tr></table></figure></p>
+<h3 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a>passwd</h3><p>功能：为用户修改密码。<br>命令格式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">passwd [用户]</div></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>：passwd比密码password少o和r。</p>
+<h3 id="who"><a href="#who" class="headerlink" title="who"></a>who</h3><p>功能：查看登陆用户命令</p>
+<blockquote>
+<ul>
+<li>tty 本地终端</li>
+<li>pts 远程终端</li>
+</ul>
+</blockquote>
+<p><strong>注意</strong>：who命令后面不需要跟任何参数</p>
+<h3 id="w"><a href="#w" class="headerlink" title="w"></a>w</h3><p>功能：得到比who更加详细的用户登陆信息命令<br>下面介绍提供的登录信息中的几个参数：</p>
+<blockquote>
+<ul>
+<li>up 表示系统连续运行了多久</li>
+<li>load average 表示平均负载情况</li>
+<li>IDLE 用户空闲时间。一旦执行任何操作，计时器会清零重新计时。</li>
+<li>JCPU 和该终端连接的所有进程占用的时间。</li>
+<li>PCPU 当前进程占用时间。</li>
+<li>WHAT 当前运行进程的命令行操作</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="压缩解压指令"><a href="#压缩解压指令" class="headerlink" title="压缩解压指令"></a>压缩解压指令</h2><p>压缩解压指令是在Linux中很常用的一类指令。<br>对于<strong>zip</strong>格式，win和linux中均可使用。<br>但<strong>rar</strong>格式的压缩包在Linux中需要安装rar工具才能解压缩。<br>一般Linux的压缩包在win中都能打开，但win中的压缩格式Linux基本无法打开。</p>
+<p>本节中介绍的命令有如下几个：</p>
+<blockquote>
+<ul>
+<li>gzip</li>
+<li>tar</li>
+<li>zip</li>
+<li>bzip2</li>
+</ul>
+</blockquote>
+<h3 id="gzip"><a href="#gzip" class="headerlink" title="gzip"></a>gzip</h3><p>gzip压缩后压缩格式为：<strong>.gz</strong><br>英文原意：GNU zip</p>
+<p>我们介绍一下GNU：wiki上关于GNU是这样写的，GNU is an operating system and an extensive collection of computer software.最有意思的是这样一句话：GNU is a recursive acronym for “GNU’s Not Unix!”。</p>
+<p>gzip压缩解压格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">压缩格式： gzip [文件名]</div><div class="line">解压格式： gunzip [文件名]</div></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>：我们在使用gzip的时候有一些反常识的东西，主要是以下两点：</p>
+<blockquote>
+<ul>
+<li>gzip只能压缩文件，不能压缩目录</li>
+<li>gzip压缩文件后原文件消失，只剩压缩包了。</li>
+</ul>
+</blockquote>
+<h3 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h3><p>命令功能：对目录进行打包，使系统可将其当作一个文件处理。<br>tar有几个非常常用的选项：</p>
+<blockquote>
+<ul>
+<li>-c 打包选项</li>
+<li>-x 解包选项</li>
+<li>-v 显示详细信息</li>
+<li>-f 指定文件名</li>
+<li>-z 按照gzip格式压缩或者解压</li>
+<li>-j 按照bzip2格式压缩或者解压</li>
+</ul>
+</blockquote>
+<p>常用的几种压缩命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -czf [压缩后压缩包名] [压缩目录]</div></pre></td></tr></table></figure></p>
+<p>上面的压缩命令执行后生成的文件后缀名默认为.tar.gz</p>
+<p><strong>注意</strong>:.tar.gz是默认标识，告诉我们这是一个以gzip格式压缩的目录，但我们在起名的时候完全可以不写.tar.gz后缀名，这样并不影响文件本身的属性，只是单纯影响阅读而已，这点和win有很大差别。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -xzf [目录]</div></pre></td></tr></table></figure>
+<p>解压目录不需要写解压后的文件名。</p>
+<h3 id="zip"><a href="#zip" class="headerlink" title="zip"></a>zip</h3><p>zip与gzip同为压缩命令，与gzip相比有如下特点：</p>
+<blockquote>
+<ul>
+<li>压缩后保留原文件</li>
+<li>加入-r选项后可以压缩目录</li>
+<li>压缩比相较gzip差很多。</li>
+</ul>
+</blockquote>
+<p>zip压缩格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">zip (-r 压缩目录) [压缩后文件名] [压缩文件或目录]</div></pre></td></tr></table></figure>
+<p>对应与zip的解压缩命令为unzip，该解压命令可以直接解压目录，不需要添加参数。</p>
+<h3 id="bzip2"><a href="#bzip2" class="headerlink" title="bzip2"></a>bzip2</h3><p>bzip2与gzip类似，也是Linux中的压缩文件命令，但bzip2做了一定优化，加入<strong>-k</strong>选项可以在压缩文件后保留原文件。</p>
+<p>命令语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bzip (-k 保留原文件) [文件名]</div></pre></td></tr></table></figure></p>
+<p>用bzip2压缩后产生的文件格式为<strong>.bz2</strong></p>
+<p>bzip2也可与tar联合使用，命令格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tar -cjf [压缩后压缩包名] [压缩目录]</div><div class="line">tar -xjf [压缩包名]</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="网络命令"><a href="#网络命令" class="headerlink" title="网络命令"></a>网络命令</h2><p>网络命令较多，现将该节中要介绍的网络命令列出：</p>
+<blockquote>
+<ul>
+<li>write</li>
+<li>wall</li>
+<li>mail</li>
+<li>ping</li>
+<li>ifconfig</li>
+<li>last</li>
+<li>lastlog</li>
+<li>traceroute</li>
+<li>netstat</li>
+</ul>
+</blockquote>
+<p>现在分组进行讲解。</p>
+<h3 id="第一组：广播和邮件命令"><a href="#第一组：广播和邮件命令" class="headerlink" title="第一组：广播和邮件命令"></a>第一组：广播和邮件命令</h3><p>现在Linux中的通讯网络发展已经比较完善，使用广播和邮件命令的人越来越少，但对于一些简单的通讯中，广播和邮件命令依然有其价值所在。</p>
+<h4 id="write"><a href="#write" class="headerlink" title="write"></a>write</h4><p>功能描述：write的功能为给用户发送信息，以<strong>Ctrl+D</strong>介绍发送。</p>
+<p>write语法格式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">write [用户名]</div></pre></td></tr></table></figure></p>
+<p>write命令中交互的信息会进行实时显示，同时需要注意的是write针对的用户必须是在线用户，如果用户不在线，则对方无法接收。<br>再一点，write的目标对象为一个用户，如果要对所有对象进行广播，可以使用下面的wall命令。</p>
+<h4 id="wall"><a href="#wall" class="headerlink" title="wall"></a>wall</h4><p>功能描述：给所有用户发送广播信息。<br>命令原意：write all<br>指令所在路径：/usr/bin/wall</p>
+<h4 id="mail"><a href="#mail" class="headerlink" title="mail"></a>mail</h4><p>功能描述：给指定用户发送邮件。<br>命令格式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">发送邮件： mail [用户]</div><div class="line">读取邮件： mail</div></pre></td></tr></table></figure></p>
+<p><strong>注意：</strong> mail指令与前面两个指令最大的不同之处在于mail可以给离线用户发送消息。</p>
+<h3 id="第二组：常用网络指令"><a href="#第二组：常用网络指令" class="headerlink" title="第二组：常用网络指令"></a>第二组：常用网络指令</h3><h4 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h4><p>功能描述：ping指令检查网络是否联通。<br>命令格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ping [选项] [IP地址]</div></pre></td></tr></table></figure>
+<p>这里我们唯一需要记住的选项是<strong>-c</strong>，该选项意为指定发送次数（count）。</p>
+<h4 id="ifconfig"><a href="#ifconfig" class="headerlink" title="ifconfig"></a>ifconfig</h4><p>功能描述：查看计算机网卡信息。<br>命令原意：interface configue<br>命令所在路径：/sbin/ifconfig (只有root可以执行该指令)<br>命令格式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">查看网卡信息： ifconfig</div><div class="line">暂时修改IP地址： ifconfig [网卡名称] [IP地址]</div></pre></td></tr></table></figure></p>
+<p>在用ifconfig查看网卡信息的时候，我们总会发现一个lo网卡，下面我们来介绍这个网卡。<br><strong>lo网卡</strong>为localhost的缩写，意为本地回环网卡，主要用于测试使用，IP地址为127.0.0.1</p>
+<p>下面介绍ifconfig中出现信息的介绍：</p>
+<blockquote>
+<ul>
+<li>Link encap:Ethernet –表示以太网</li>
+<li>HWADDR              –硬件地址</li>
+<li>RX packets  –接收数据包总数量</li>
+<li>TX packets  –发送数据包总数量</li>
+<li>RX bytes    –接收数据包大小</li>
+<li>TX bytes    –发送数据包大小</li>
+</ul>
+</blockquote>
+<h3 id="第三组：用户登录信息查看指令"><a href="#第三组：用户登录信息查看指令" class="headerlink" title="第三组：用户登录信息查看指令"></a>第三组：用户登录信息查看指令</h3><h4 id="last"><a href="#last" class="headerlink" title="last"></a>last</h4><p>功能描述：该指令用于列出目前与过去登陆系统的用户信息。</p>
+<h4 id="lastlog"><a href="#lastlog" class="headerlink" title="lastlog"></a>lastlog</h4><p>功能描述：列出所有用户，说明最后一次登录时间。</p>
+<p>lastlog还可以查看指定UID用户的最后一次登录时间查询，用法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lastlog -u [UID]</div></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>：要留意last与lastlog的细微差别，last指令中列写的是最近登录的用户，某个活跃的用户可能在last指令中显示多次。但lastlog对所有用户都只列写一次，并说明其最后登录时间，即便是创建后没有登陆过的用户也一样被列写。</p>
+<h3 id="第四组：网络路径及网络相关信息查看指令"><a href="#第四组：网络路径及网络相关信息查看指令" class="headerlink" title="第四组：网络路径及网络相关信息查看指令"></a>第四组：网络路径及网络相关信息查看指令</h3><h4 id="traceroute"><a href="#traceroute" class="headerlink" title="traceroute"></a>traceroute</h4><p>功能：显示数据包到主机间的路径。</p>
+<p>该功能在实际中非常有用，可以用来检测网站中出现问题的地方。</p>
+<h4 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h4><p>功能描述：显示网络相关信息<br>命令格式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">netstat [选项]</div></pre></td></tr></table></figure></p>
+<p>命令选项：</p>
+<blockquote>
+<ul>
+<li>-t TCP协议</li>
+<li>-u UDP协议</li>
+<li>-l 监听</li>
+<li>-r 路由</li>
+<li>-n 显示IP地址和端口号</li>
+</ul>
+</blockquote>
+<p>下面简单区别TCP协议与UDP协议：</p>
+<blockquote>
+<ul>
+<li>TCP协议三次握手，可靠。</li>
+<li>UDP协议不握手，快速。</li>
+</ul>
+</blockquote>
+<p>下面介绍netstat的常用搭配：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">netstat -an 查看所有监听信息</div><div class="line">netstat -rn 查看本机路由表</div></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>：当我们访问网站或其他内容时，发起端口是随机的，只有目标端口才是固定的。</p>
+<hr>
+<h2 id="挂载命令mount"><a href="#挂载命令mount" class="headerlink" title="挂载命令mount"></a>挂载命令mount</h2><p>挂载对win用户来说是一种陌生的操作。但实际上不管是linux还是win，挂载都是实际存在的，当系统中出现新的分区时，系统并不能立即识别，只有通过挂载才能使用。但在win中，系统已经为我们默认扫描，当发现新分区的时候就立刻给我们挂载了，因此在win中我们体会不到这样一个过程。</p>
+<p>命令格式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mount [-t 文件系统] [设备文件名] [挂载点]</div><div class="line">mount -t iso9660 /dev/sr0 /mnt/cdrom/</div></pre></td></tr></table></figure></p>
+<p>需要注意/dev/sr0与/dev/cdrom是软链接，都可以作为设备文件名。</p>
+<p>一般推荐挂载到Linux推荐的挂载目录：/media/，或者创建并挂载到/mnt/cdrom</p>
+<p>与挂载命令相对应的卸载命令<strong>umount</strong>格式较为简单，语法格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">umount /dev/sr0</div></pre></td></tr></table></figure></p>
+<h2 id="开机关机命令"><a href="#开机关机命令" class="headerlink" title="开机关机命令"></a>开机关机命令</h2><h3 id="shutdown"><a href="#shutdown" class="headerlink" title="shutdown"></a>shutdown</h3><p>shutdown关机命令有如下几个常用参数：</p>
+<blockquote>
+<ul>
+<li>-h 关机</li>
+<li>-r 重启</li>
+<li>-c 取消前一个关机命令</li>
+</ul>
+</blockquote>
+<p><strong>提醒</strong>：除shutdown外，还有一些关机命令，现列举如下：</p>
+<blockquote>
+<ul>
+<li>halt</li>
+<li>poweroff</li>
+<li>init 0</li>
+</ul>
+</blockquote>
+<p>一些重启命令，列举如下：</p>
+<blockquote>
+<ul>
+<li>roboot</li>
+<li>init 6</li>
+</ul>
+</blockquote>
+<p>我们注意到，init后面可以跟不同的数值，实际上，init代表<strong>系统运行级别</strong>，系统运行级别共有七个，列举如下：</p>
+<blockquote>
+<ul>
+<li>init 0 关机</li>
+<li>init 1 单用户模式</li>
+<li>init 2 不完全多用户模式，不含NFS(network file system)服务，NFS存在安全隐患，故存在单独的运行级别。</li>
+<li>init 3 完全多用户模式</li>
+<li>init 4 未分配</li>
+<li>init 5 图形界面</li>
+<li>init 6 重启</li>
+</ul>
+</blockquote>
+<p>如果我们想要更改运行级别，我们可以进入<strong>/etc/inittab</strong>下修改。</p>
+<p>在Shell命令中，提供了一个查询运行级别的命令，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">runlevel</div></pre></td></tr></table></figure></p>
+<p>该命令第一个数字显示之前的运行级别，后面一个数字显示切换后的运行级别。</p>
+<h3 id="logout"><a href="#logout" class="headerlink" title="logout"></a>logout</h3><p>命令功能：注销用户<br><strong>注意</strong>：这个命令格式很简单，但我们在实际使用后，要养成注销用户的好习惯。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CentOS命令/" rel="tag"># CentOS命令</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/17/linux_shell/linux-centos-fourth-ls/" rel="next" title="Linux目录操作命令及帮助命令">
+                <i class="fa fa-chevron-left"></i> Linux目录操作命令及帮助命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/01/linux_shell/linux_centos_fifth_useradd/" rel="prev" title="df">
+                df <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Chauncy Li</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用户管理命令"><span class="nav-number">1.</span> <span class="nav-text">用户管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#useradd"><span class="nav-number">1.1.</span> <span class="nav-text">useradd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#passwd"><span class="nav-number">1.2.</span> <span class="nav-text">passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#who"><span class="nav-number">1.3.</span> <span class="nav-text">who</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#w"><span class="nav-number">1.4.</span> <span class="nav-text">w</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩解压指令"><span class="nav-number">2.</span> <span class="nav-text">压缩解压指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gzip"><span class="nav-number">2.1.</span> <span class="nav-text">gzip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tar"><span class="nav-number">2.2.</span> <span class="nav-text">tar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zip"><span class="nav-number">2.3.</span> <span class="nav-text">zip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzip2"><span class="nav-number">2.4.</span> <span class="nav-text">bzip2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络命令"><span class="nav-number">3.</span> <span class="nav-text">网络命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一组：广播和邮件命令"><span class="nav-number">3.1.</span> <span class="nav-text">第一组：广播和邮件命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#write"><span class="nav-number">3.1.1.</span> <span class="nav-text">write</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wall"><span class="nav-number">3.1.2.</span> <span class="nav-text">wall</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mail"><span class="nav-number">3.1.3.</span> <span class="nav-text">mail</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二组：常用网络指令"><span class="nav-number">3.2.</span> <span class="nav-text">第二组：常用网络指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ping"><span class="nav-number">3.2.1.</span> <span class="nav-text">ping</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ifconfig"><span class="nav-number">3.2.2.</span> <span class="nav-text">ifconfig</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三组：用户登录信息查看指令"><span class="nav-number">3.3.</span> <span class="nav-text">第三组：用户登录信息查看指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#last"><span class="nav-number">3.3.1.</span> <span class="nav-text">last</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lastlog"><span class="nav-number">3.3.2.</span> <span class="nav-text">lastlog</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四组：网络路径及网络相关信息查看指令"><span class="nav-number">3.4.</span> <span class="nav-text">第四组：网络路径及网络相关信息查看指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#traceroute"><span class="nav-number">3.4.1.</span> <span class="nav-text">traceroute</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#netstat"><span class="nav-number">3.4.2.</span> <span class="nav-text">netstat</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挂载命令mount"><span class="nav-number">4.</span> <span class="nav-text">挂载命令mount</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开机关机命令"><span class="nav-number">5.</span> <span class="nav-text">开机关机命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shutdown"><span class="nav-number">5.1.</span> <span class="nav-text">shutdown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#logout"><span class="nav-number">5.2.</span> <span class="nav-text">logout</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chauncy Li</span>
+
+  
+</div>
+
+
+<!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+-->
+
+
+
+<!--<div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+-->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
