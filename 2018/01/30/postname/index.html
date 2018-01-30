@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="音乐," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="节奏与拍拍音乐中用来定义音的长度的单位。但其没有固定的时长，根据作者的要求而确定。 速度bpm：beats per minute每分钟拍的数量。根据速度可以确定拍的时长。如速度为60BPM，则一拍的长度为1s。 音符音符用于表示音的长度的符号。同一个音，如何在谱子上表达它需要发声多长时间呢？人们规定了一套规则来说明这个长度。这就是音符。 小节一定数量的拍构成一个小节。、，小节是曲子最基本的节奏循环">
+<meta name="keywords" content="音乐">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基础乐理知识">
+<meta property="og:url" content="http://yoursite.com/2018/01/30/postname/index.html">
+<meta property="og:site_name" content="Chauncy Li">
+<meta property="og:description" content="节奏与拍拍音乐中用来定义音的长度的单位。但其没有固定的时长，根据作者的要求而确定。 速度bpm：beats per minute每分钟拍的数量。根据速度可以确定拍的时长。如速度为60BPM，则一拍的长度为1s。 音符音符用于表示音的长度的符号。同一个音，如何在谱子上表达它需要发声多长时间呢？人们规定了一套规则来说明这个长度。这就是音符。 小节一定数量的拍构成一个小节。、，小节是曲子最基本的节奏循环">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/fl%20%E5%B0%8F%E8%8A%82%E7%A4%BA%E6%84%8F%E5%9B%BE">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/fl%E5%B0%8F%E8%8A%82%E7%A4%BA%E6%84%8F%E5%9B%BE2.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20180130144608.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E9%92%A2%E7%90%B4%E9%94%AE%E7%9B%98%E7%9A%84%E4%B8%80%E4%B8%AA%E5%91%A8%E6%9C%9F.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E9%9F%B3%E7%A8%8B.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/C%E5%A4%A7%E8%B0%83.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/D%E5%A4%A7%E8%B0%83.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E9%9F%B3%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E9%9F%B3%E7%9A%84%E5%80%BE%E5%90%91%E6%80%A7.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E5%A4%A7%E4%B8%89%E5%92%8C%E5%BC%A6.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E5%B0%8F%E4%B8%89%E5%92%8C%E5%BC%A6.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E5%87%8F%E4%B8%89%E5%92%8C%E5%BC%A6.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E5%A4%A7%E4%B8%83%E5%92%8C%E5%BC%A6.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E5%B0%8F%E4%B8%83%E5%92%8C%E5%BC%A6.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E5%B1%9E%E4%B8%83%E5%92%8C%E5%BC%A6.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E5%B0%8F%E5%A4%A7%E4%B8%83%E5%92%8C%E5%BC%A6.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E4%B8%89%E5%92%8C%E5%BC%A6%E8%BD%AC%E4%BD%8D.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E4%B8%83%E5%92%8C%E5%BC%A6%E8%BD%AC%E4%BD%8D.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E4%BA%94%E5%BA%A6%E5%BE%AA%E7%8E%AF%E5%9C%88.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E5%90%84%E9%9F%B3%E7%BA%A7%E5%90%8D%E7%A7%B0.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/%E8%87%AA%E7%84%B6%E5%B0%8F%E8%B0%83.jpg">
+<meta property="og:image" content="http://oywgahazb.bkt.clouddn.com/a%E5%B0%8F%E8%B0%83.jpg">
+<meta property="og:updated_time" content="2018-01-30T12:11:36.568Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基础乐理知识">
+<meta name="twitter:description" content="节奏与拍拍音乐中用来定义音的长度的单位。但其没有固定的时长，根据作者的要求而确定。 速度bpm：beats per minute每分钟拍的数量。根据速度可以确定拍的时长。如速度为60BPM，则一拍的长度为1s。 音符音符用于表示音的长度的符号。同一个音，如何在谱子上表达它需要发声多长时间呢？人们规定了一套规则来说明这个长度。这就是音符。 小节一定数量的拍构成一个小节。、，小节是曲子最基本的节奏循环">
+<meta name="twitter:image" content="http://oywgahazb.bkt.clouddn.com/fl%20%E5%B0%8F%E8%8A%82%E7%A4%BA%E6%84%8F%E5%9B%BE">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/30/postname/"/>
+
+
+
+
+
+  <title>基础乐理知识 | Chauncy Li</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Chauncy Li</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">这是一个无人问津的世外桃源。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/30/postname/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chauncy Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chauncy Li">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">基础乐理知识</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-30T19:48:03+08:00">
+                2018-01-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/音乐/" itemprop="url" rel="index">
+                    <span itemprop="name">音乐</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="节奏与拍"><a href="#节奏与拍" class="headerlink" title="节奏与拍"></a>节奏与拍</h2><h3 id="拍"><a href="#拍" class="headerlink" title="拍"></a>拍</h3><p>音乐中用来定义音的长度的单位。但其没有固定的时长，根据作者的要求而确定。</p>
+<h3 id="速度"><a href="#速度" class="headerlink" title="速度"></a>速度</h3><p>bpm：beats per minute<br>每分钟拍的数量。根据速度可以确定拍的时长。如速度为60BPM，则一拍的长度为1s。</p>
+<h3 id="音符"><a href="#音符" class="headerlink" title="音符"></a>音符</h3><p>音符用于表示音的长度的符号。<strong>同一个音，如何在谱子上表达它需要发声多长时间呢</strong>？人们规定了一套规则来说明这个长度。这就是音符。</p>
+<h3 id="小节"><a href="#小节" class="headerlink" title="小节"></a>小节</h3><p>一定数量的拍构成一个小节。、，小节是曲子最基本的节奏循环单位。</p>
+<h3 id="节拍"><a href="#节拍" class="headerlink" title="节拍"></a>节拍</h3><p>用于确定小节中拍的数量以及不同音符的具体时间长短。例如：</p>
+<p>$$ \frac{4-表示每小节四拍}{4-每四分音符为一拍} $$</p>
+<p>由此我们可见，通过节拍我们确定了小结，拍与音符之间的定量关系。结合速度的定义我们可确定音符，拍与小节持续的时间。</p>
+<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><p>下面我们通过一个FL_STUDIO例子来说明：</p>
+<p><img src="http://oywgahazb.bkt.clouddn.com/fl%20%E5%B0%8F%E8%8A%82%E7%A4%BA%E6%84%8F%E5%9B%BE" alt="fl_小节图"></p>
+<p>如上图所示，每四个小方块代表一拍，如果用4/4来表示该图，则可表述如下：每小节四拍，四分音符为一拍，一个小方块代表十六分音符。</p>
+<p>我们最常听到的节奏是强调第二拍和第四拍，图中的例子刚好说明这点。图中的节奏如下：<br><a href="http://oywgahazb.bkt.clouddn.com/fl%E5%9F%BA%E6%9C%AC%E8%8A%82%E5%A5%8F.mp3" target="_blank" rel="external">点我点我</a></p>
+<p>再举一个例子：<br><img src="http://oywgahazb.bkt.clouddn.com/fl%E5%B0%8F%E8%8A%82%E7%A4%BA%E6%84%8F%E5%9B%BE2.jpg" alt="fl_例子2"><br>它的节奏如下：<br><a href="http://oywgahazb.bkt.clouddn.com/untitled.mp3" target="_blank" rel="external">点我点我</a><br>是不是很有违和感，哈哈。</p>
+<h2 id="钢琴键盘"><a href="#钢琴键盘" class="headerlink" title="钢琴键盘"></a>钢琴键盘</h2><p>钢琴黑键和白键加起来总共是88个键，相邻琴键相差半音。如下图所示：<br><img src="http://oywgahazb.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20180130144608.jpg" alt="钢琴键盘"></p>
+<p>可以看出，钢琴键盘以五个黑键，七个白键为一组不断重复。如下图所示：<br><img src="http://oywgahazb.bkt.clouddn.com/%E9%92%A2%E7%90%B4%E9%94%AE%E7%9B%98%E7%9A%84%E4%B8%80%E4%B8%AA%E5%91%A8%E6%9C%9F.jpg" alt="钢琴键盘的一个周期"></p>
+<h2 id="音程"><a href="#音程" class="headerlink" title="音程"></a>音程</h2><p><img src="http://oywgahazb.bkt.clouddn.com/%E9%9F%B3%E7%A8%8B.jpg" alt="音程"></p>
+<p>定义：音程指两个音级在音高上的相互关系，就是指两个音在音高上的距离而言，其单位名称叫做度。</p>
+<p>如上图所示，两相邻白键之间度数为2，键与其自身度数为1，键与下一个相同数字的键相差的度数为8。在同一组中度数计算公式为：末键数字-首键数字+1。</p>
+<p>而音程是小还是大则由半音数决定，对于相同度数，半音数多的为大音程，半音数少的为小音程。</p>
+<h3 id="音程的转位："><a href="#音程的转位：" class="headerlink" title="音程的转位："></a>音程的转位：</h3><p>定义：将音程的冠音和根音相互颠倒位置，这种转换叫做音程转位。</p>
+<p>转位之后可根据转位前的音程迅速判断出转位后的音程，具体原则有以下三条：</p>
+<blockquote>
+<ul>
+<li>度数相加和为9</li>
+<li>大小增减是互换</li>
+<li>纯音程转位还是纯音程</li>
+</ul>
+</blockquote>
+<h3 id="音程的协和性"><a href="#音程的协和性" class="headerlink" title="音程的协和性"></a>音程的协和性</h3><p>定义：协和音程是指听起来悦耳、融合的音程。<br>||||<br>| - | :-: |<br>| 完全协和音程 | 纯一度、纯八度|<br>| 协和音程 | 纯四度、纯五度 |<br>| 不完全协和音程 | 大小三度、大小六度 |<br>|不协和音程|大小二度、大小七度、增四减五度|</p>
+<p><strong>注意</strong>：三度和六度是构成和弦的重要音程。</p>
+<h2 id="调"><a href="#调" class="headerlink" title="调"></a>调</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>调(key)，就是音乐作品（或一个作品中的某一个部分）中起核心作用的主音支配下互起作用的一群具有一定高度的音，调是与音阶相一致的。</p>
+<h3 id="大调"><a href="#大调" class="headerlink" title="大调"></a>大调</h3><p>以<strong>全音、全音、半音、全音、全音、全音、半音</strong>构成的调。简称“qqbqqqb”</p>
+<p>下图为C大调。<br><img src="http://oywgahazb.bkt.clouddn.com/C%E5%A4%A7%E8%B0%83.jpg" alt="C大调"></p>
+<p>下图为D大调。<br><img src="http://oywgahazb.bkt.clouddn.com/D%E5%A4%A7%E8%B0%83.jpg" alt="D大调"></p>
+<p>可以看出均遵守大调规则。</p>
+<h3 id="调的稳定性"><a href="#调的稳定性" class="headerlink" title="调的稳定性"></a>调的稳定性</h3><p>音调的稳定性如同控制原理中的稳定性一样，如果不能保证，会导致实际状况非常糟糕。不稳定的音调会让人的内心躁动不安，感受不到音乐的美妙。</p>
+<p>调的稳定性排序如下：<br><img src="http://oywgahazb.bkt.clouddn.com/%E9%9F%B3%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7.jpg" alt="调的稳定性"></p>
+<p><strong>记忆规律</strong>：首先，我们可以记住奇数为稳定音（物极必反：7为最不稳定音），偶数为不稳定音，在大方向弄对后细节可不必深究。</p>
+<p>在弄清楚音调稳定新的基础上，我们要知道这样一个规律，即<strong>音调总是倾向于从不稳定的音过渡到稳定的音</strong>，是为音调的倾向性。倾向性如下图所示：<br><img src="http://oywgahazb.bkt.clouddn.com/%E9%9F%B3%E7%9A%84%E5%80%BE%E5%90%91%E6%80%A7.jpg" alt="音调的倾向性"><br>可总结如下：<strong>音调总是从偶数不稳定音转化为与其相邻并且低一度的奇数稳定音（7除外）。</strong></p>
+<h2 id="和弦"><a href="#和弦" class="headerlink" title="和弦"></a>和弦</h2><p>一般而言，和弦按照<strong>三度叠置</strong>构成。</p>
+<h3 id="大三和弦-Cmaj"><a href="#大三和弦-Cmaj" class="headerlink" title="大三和弦 Cmaj"></a>大三和弦 Cmaj</h3><p><img src="http://oywgahazb.bkt.clouddn.com/%E5%A4%A7%E4%B8%89%E5%92%8C%E5%BC%A6.jpg" alt="大三和弦"><br><strong>注意</strong>：大三和弦CM一般简写为C</p>
+<h3 id="小三和弦-Dmoi"><a href="#小三和弦-Dmoi" class="headerlink" title="小三和弦 Dmoi"></a>小三和弦 Dmoi</h3><p><img src="http://oywgahazb.bkt.clouddn.com/%E5%B0%8F%E4%B8%89%E5%92%8C%E5%BC%A6.jpg" alt="小三和弦"></p>
+<h3 id="减三和弦-Bdim"><a href="#减三和弦-Bdim" class="headerlink" title="减三和弦 Bdim"></a>减三和弦 Bdim</h3><p><img src="http://oywgahazb.bkt.clouddn.com/%E5%87%8F%E4%B8%89%E5%92%8C%E5%BC%A6.jpg" alt="减三和弦"></p>
+<h3 id="大七和弦-Cmaj7"><a href="#大七和弦-Cmaj7" class="headerlink" title="大七和弦 Cmaj7"></a>大七和弦 Cmaj7</h3><p>大七和弦=大三和弦+距离根音 大七度的音<br><img src="http://oywgahazb.bkt.clouddn.com/%E5%A4%A7%E4%B8%83%E5%92%8C%E5%BC%A6.jpg" alt="大七和弦"></p>
+<h3 id="小七和弦-Amin7"><a href="#小七和弦-Amin7" class="headerlink" title="小七和弦 Amin7"></a>小七和弦 Amin7</h3><p>小七和弦=小三和弦+小七度+距离根音 小七度的音<br><img src="http://oywgahazb.bkt.clouddn.com/%E5%B0%8F%E4%B8%83%E5%92%8C%E5%BC%A6.jpg" alt="小七和弦"></p>
+<h3 id="属七和弦"><a href="#属七和弦" class="headerlink" title="属七和弦"></a>属七和弦</h3><p>属七和弦=大三和弦+小七度<br><strong>注意</strong>：属七和弦有特殊的表示字母G<br><img src="http://oywgahazb.bkt.clouddn.com/%E5%B1%9E%E4%B8%83%E5%92%8C%E5%BC%A6.jpg" alt="属七和弦"></p>
+<h3 id="小大七和弦"><a href="#小大七和弦" class="headerlink" title="小大七和弦"></a>小大七和弦</h3><p><img src="http://oywgahazb.bkt.clouddn.com/%E5%B0%8F%E5%A4%A7%E4%B8%83%E5%92%8C%E5%BC%A6.jpg" alt="小大七和弦"></p>
+<h3 id="和弦转位"><a href="#和弦转位" class="headerlink" title="和弦转位"></a>和弦转位</h3><h4 id="三和弦转位"><a href="#三和弦转位" class="headerlink" title="三和弦转位"></a>三和弦转位</h4><p><img src="http://oywgahazb.bkt.clouddn.com/%E4%B8%89%E5%92%8C%E5%BC%A6%E8%BD%AC%E4%BD%8D.jpg" alt="三和弦转位"></p>
+<h4 id="七和弦转位"><a href="#七和弦转位" class="headerlink" title="七和弦转位"></a>七和弦转位</h4><p><img src="http://oywgahazb.bkt.clouddn.com/%E4%B8%83%E5%92%8C%E5%BC%A6%E8%BD%AC%E4%BD%8D.jpg" alt="七和弦转位"></p>
+<h2 id="五度循环圈（Cicle-of-fifths）"><a href="#五度循环圈（Cicle-of-fifths）" class="headerlink" title="五度循环圈（Cicle of fifths）"></a>五度循环圈（Cicle of fifths）</h2><p><img src="http://oywgahazb.bkt.clouddn.com/%E4%BA%94%E5%BA%A6%E5%BE%AA%E7%8E%AF%E5%9C%88.jpg" alt="五度循环圈"><br> 纯五度是协和音程，但与其只相差一个半音的减五度却是不协和音程，这个现象可以从<strong>频率比</strong>和<strong>泛音列</strong>两个角度去思考。</p>
+<h2 id="各音级的名称"><a href="#各音级的名称" class="headerlink" title="各音级的名称"></a>各音级的名称</h2><p><img src="http://oywgahazb.bkt.clouddn.com/%E5%90%84%E9%9F%B3%E7%BA%A7%E5%90%8D%E7%A7%B0.jpg" alt="各音级名称"></p>
+<h2 id="自然小调"><a href="#自然小调" class="headerlink" title="自然小调"></a>自然小调</h2><p>大调音乐比较欢快，小调歌曲比较悲伤、浪漫，色彩黯淡。<br><img src="http://oywgahazb.bkt.clouddn.com/%E8%87%AA%E7%84%B6%E5%B0%8F%E8%B0%83.jpg" alt="自然小调"><br><strong>注意</strong>：大调和小调最重要的区别就是Ⅲ级音阶。也是使小调听起来悲伤的重要音阶。可以说：主音和中音是大三度就是大调，主音和三级音是小三度就是小调。</p>
+<h2 id="关系大小调"><a href="#关系大小调" class="headerlink" title="关系大小调"></a>关系大小调</h2><p><img src="http://oywgahazb.bkt.clouddn.com/a%E5%B0%8F%E8%B0%83.jpg" alt="a小调"><br>a小调与C大调一样，只占用白键而不占黑键。<br>称构成音相同但主音不同的大调与小调称为关系大小调。</p>
+<p>关系大小调的几点说明：</p>
+<blockquote>
+<ul>
+<li>有多少个大调就有多少个关系小调</li>
+<li>大调的六级音（下中音）就是对应关系小调的主音。</li>
+<li>小调的三级音（中音）就是对应关系大调的主音。</li>
+</ul>
+</blockquote>
+<h2 id="音程度数判断"><a href="#音程度数判断" class="headerlink" title="音程度数判断"></a>音程度数判断</h2><p>基本音级：C D E F G A B </p>
+<p>写音阶构成音时候，相邻音之间音程需要是<strong>二度</strong>，不能是<strong>一度</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/音乐/" rel="tag"># 音乐</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/29/linux_net/base_knowledge/" rel="next" title="Linux网络基础">
+                <i class="fa fa-chevron-left"></i> Linux网络基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Chauncy Li</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#节奏与拍"><span class="nav-number">1.</span> <span class="nav-text">节奏与拍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#拍"><span class="nav-number">1.1.</span> <span class="nav-text">拍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#速度"><span class="nav-number">1.2.</span> <span class="nav-text">速度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#音符"><span class="nav-number">1.3.</span> <span class="nav-text">音符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小节"><span class="nav-number">1.4.</span> <span class="nav-text">小节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#节拍"><span class="nav-number">1.5.</span> <span class="nav-text">节拍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#举例"><span class="nav-number">1.6.</span> <span class="nav-text">举例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#钢琴键盘"><span class="nav-number">2.</span> <span class="nav-text">钢琴键盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#音程"><span class="nav-number">3.</span> <span class="nav-text">音程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#音程的转位："><span class="nav-number">3.1.</span> <span class="nav-text">音程的转位：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#音程的协和性"><span class="nav-number">3.2.</span> <span class="nav-text">音程的协和性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调"><span class="nav-number">4.</span> <span class="nav-text">调</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">4.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大调"><span class="nav-number">4.2.</span> <span class="nav-text">大调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调的稳定性"><span class="nav-number">4.3.</span> <span class="nav-text">调的稳定性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#和弦"><span class="nav-number">5.</span> <span class="nav-text">和弦</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#大三和弦-Cmaj"><span class="nav-number">5.1.</span> <span class="nav-text">大三和弦 Cmaj</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小三和弦-Dmoi"><span class="nav-number">5.2.</span> <span class="nav-text">小三和弦 Dmoi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#减三和弦-Bdim"><span class="nav-number">5.3.</span> <span class="nav-text">减三和弦 Bdim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大七和弦-Cmaj7"><span class="nav-number">5.4.</span> <span class="nav-text">大七和弦 Cmaj7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小七和弦-Amin7"><span class="nav-number">5.5.</span> <span class="nav-text">小七和弦 Amin7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属七和弦"><span class="nav-number">5.6.</span> <span class="nav-text">属七和弦</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小大七和弦"><span class="nav-number">5.7.</span> <span class="nav-text">小大七和弦</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#和弦转位"><span class="nav-number">5.8.</span> <span class="nav-text">和弦转位</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#三和弦转位"><span class="nav-number">5.8.1.</span> <span class="nav-text">三和弦转位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#七和弦转位"><span class="nav-number">5.8.2.</span> <span class="nav-text">七和弦转位</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五度循环圈（Cicle-of-fifths）"><span class="nav-number">6.</span> <span class="nav-text">五度循环圈（Cicle of fifths）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各音级的名称"><span class="nav-number">7.</span> <span class="nav-text">各音级的名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自然小调"><span class="nav-number">8.</span> <span class="nav-text">自然小调</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系大小调"><span class="nav-number">9.</span> <span class="nav-text">关系大小调</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#音程度数判断"><span class="nav-number">10.</span> <span class="nav-text">音程度数判断</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chauncy Li</span>
+
+  
+</div>
+
+
+<!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+-->
+
+
+
+<!--<div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+-->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
